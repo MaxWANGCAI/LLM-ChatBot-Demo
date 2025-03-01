@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能知识库助手</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>智能知识库助手</h1>
+        </div>
+        
+        <div class="input-container">
+            <select id="assistant-type">
+                <option value="legal">法务知识库助手</option>
+                <option value="business">业务流程及品类知识库助手</option>
+                <option value="customer">智能客服</option>
+            </select>
+            <button id="clear-button" class="clear-button">清除上下文</button>
+        </div>
+        
+        <div id="chat-container" class="chat-container">
+            <!-- 消息将在这里动态添加 -->
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="message-input" placeholder="请输入您的问题...">
+            <button id="send-button">发送</button>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html> 
