@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 from app.api.routers.chat import ChatRequest, ChatResponse
 from app.core.chains.conversation_chain import ConversationChain
 from app.utils.logger import qa_logger
+import requests
+from elasticsearch import Elasticsearch
 
 # 设置中文字体
 plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']  # macOS
@@ -276,8 +278,42 @@ class QATestRunner:
                 validation_result=validation_result
             )
     
+    def basic_checks(self):
+        """执行基础检查项"""
+        es = Elasticsearch("http://localhost:9200")
+
+        # 检查ES服务可用性
+        if not es.ping():
+            raise Exception("Elasticsearch 服务不可用")
+
+        # 检查索引存在性
+        required_indices = ["knowledge_base_general", "knowledge_base_legal", "knowledge_base_business"]
+        for index in required_indices:
+            if not es.indices.exists(index=index):
+                raise Exception(f"索引不存在: {index}")
+
+        # 检查大模型调用正常性
+        chain = ConversationChain(kb_type="general")
+        response = asyncio.run(chain.get_response("测试"))
+        if not response or "answer" not in response:
+            raise Exception("大模型调用失败")
+
+        # 检查网络服务可用性
+        try:
+            res = requests.get("http://localhost:8000/docs")
+            if res.status_code != 200:
+                raise Exception("网络服务不可用")
+        except requests.exceptions.RequestException as e:
+            raise Exception(f"网络服务检查失败: {e}")
+
     async def run_all_tests(self):
         """运行所有测试用例"""
+        try:
+            self.basic_checks()
+        except Exception as e:
+            qa_logger.log_error(f"基础检查失败: {e}")
+            return
+
         for category, test_cases in self.test_cases.items():
             qa_logger.log_info(f"开始执行测试类别: {category}")
             session_id = f"test_{int(time.time())}"
