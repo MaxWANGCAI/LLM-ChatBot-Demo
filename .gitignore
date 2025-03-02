@@ -6,7 +6,7 @@ test_reports/*
 
 # 数据文件夹
 data/production/
-app/data/
+app/data/*
 
 # 保留示例数据
 !data/examples/
