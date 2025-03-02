@@ -1,0 +1,26 @@
+content,source_type,source_name,created_at
+"根据《中华人民共和国合同法》，合同的订立应当遵循自愿、平等、公平、诚实信用的原则。",{"category": "contract_law", "source": "中华人民共和国合同法"},legal_doc,contract_approval,2023-03-10
+"商标注册的有效期为10年，自核准注册之日起计算。注册商标有效期满，需要继续使用的，商标注册人应当在期满前12个月内按照规定办理续展手续。",{"category": "trademark_law", "source": "中华人民共和国商标法"},legal_doc,contract_approval,2023-03-10
+"著作权自作品创作完成之日起产生。作品可以不经登记即可获得保护，但是进行著作权登记有利于在权利纠纷发生时举证。",{"category": "copyright_law", "source": "中华人民共和国著作权法"},legal_doc,contract_approval,2023-03-10
+"企业经营必须取得营业执照，无照经营将被处以罚款，情节严重的将被责令停业。",{"category": "business_license", "source": "中华人民共和国公司法"},legal_doc,contract_approval,2023-03-10
+"劳动合同必须以书面形式订立，用人单位自用工之日起超过一个月不与劳动者订立书面劳动合同的，应当向劳动者每月支付二倍的工资。",{"category": "labor_law", "source": "中华人民共和国劳动合同法"},legal_doc,contract_approval,2023-03-10
+"消费者在购买商品时，有权获得商品的真实信息，经营者不得作虚假或引人误解的宣传。",{"category": "consumer_protection", "source": "中华人民共和国消费者权益保护法"},legal_doc,contract_approval,2023-03-10
+"食品经营者应当建立并执行进货查验记录制度，如实记录并保存相关凭证。",{"category": "food_safety", "source": "中华人民共和国食品安全法"},legal_doc,contract_approval,2023-03-10
+"广告内容应当真实、合法，不得含有虚假或者引人误解的内容，不得欺骗、误导消费者。",{"category": "advertising_law", "source": "中华人民共和国广告法"},legal_doc,contract_approval,2023-03-10
+"经营者不得利用格式条款免除自己的责任、加重消费者责任、排除消费者的合法权利。",{"category": "consumer_protection", "source": "中华人民共和国消费者权益保护法"},legal_doc,contract_approval,2023-03-10
+"用人单位应当依法为劳动者缴纳社会保险，包括基本养老保险、基本医疗保险、工伤保险、失业保险和生育保险。",{"category": "social_insurance", "source": "中华人民共和国社会保险法"},legal_doc,contract_approval,2023-03-10
+"商业秘密是指不为公众所知悉、具有商业价值并经权利人采取保密措施的技术信息和经营信息。",{"category": "trade_secret", "source": "中华人民共和国反不正当竞争法"},legal_doc,contract_approval,2023-03-10
+"电子商务经营者应当全面、真实、准确、及时地披露商品或者服务信息，保障消费者的知情权和选择权。",{"category": "e_commerce", "source": "中华人民共和国电子商务法"},legal_doc,contract_approval,2023-03-10
+"经营者收集、使用消费者个人信息，应当遵循合法、正当、必要的原则，明示收集、使用信息的目的、方式和范围。",{"category": "data_protection", "source": "中华人民共和国个人信息保护法"},legal_doc,contract_approval,2023-03-10
+"企业应当依法履行环境保护义务，防止污染和其他公害，对所造成的环境污染和生态破坏依法承担责任。",{"category": "environmental_protection", "source": "中华人民共和国环境保护法"},legal_doc,contract_approval,2023-03-10
+"经营者不得实施垄断协议、滥用市场支配地位以及具有或者可能具有排除、限制竞争效果的经营者集中。",{"category": "anti_monopoly", "source": "中华人民共和国反垄断法"},legal_doc,contract_approval,2023-03-10
+"企业应当依法纳税，如实申报，不得偷税、漏税。偷税、漏税将受到税务机关的处罚。",{"category": "tax_law", "source": "中华人民共和国税收征收管理法"},legal_doc,contract_approval,2023-03-10
+"企业破产清算时，清偿顺序依次为：破产费用和共益债务、职工债权、社会保险费用和税款、普通破产债权。",{"category": "bankruptcy_law", "source": "中华人民共和国企业破产法"},legal_doc,contract_approval,2023-03-10
+"网络交易平台经营者应当对平台内经营者的身份信息进行核验、登记，建立登记档案并定期核验更新。",{"category": "e_commerce", "source": "中华人民共和国电子商务法"},legal_doc,contract_approval,2023-03-10
+"经营者应当保证其提供的商品或者服务符合保障人身、财产安全的要求。",{"category": "product_safety", "source": "中华人民共和国产品质量法"},legal_doc,contract_approval,2023-03-10
+"企业应当建立健全的财务会计制度，依法设置会计账簿，如实记录并保管会计资料。",{"category": "accounting_law", "source": "中华人民共和国会计法"},legal_doc,contract_approval,2023-03-10
+"特许经营活动应当遵循自愿、公平、诚信的原则，特许人应当向被特许人充分披露信息。",{"category": "franchise_law", "source": "商业特许经营管理条例"},legal_doc,contract_approval,2023-03-10
+"知识产权保护是指通过法律手段保护创作者、发明者或其他知识产权所有者对其智力创造成果所享有的专有权利。知识产权主要包括专利权、商标权、著作权、商业秘密等。知识产权保护的目的是鼓励创新、促进技术进步和文化发展，同时确保创作者能够从其创造中获得经济回报。在中国，《专利法》、《商标法》、《著作权法》等法律法规共同构成了知识产权保护的法律体系。",legal_doc,intellectual_property,2023-02-15
+"合同审批流程通常包括以下步骤：\n1. 合同起草：由业务部门或法务部门起草合同初稿\n2. 内部审核：由法务部门进行合规性审查\n3. 风险评估：评估合同可能带来的法律和商业风险\n4. 部门会签：相关部门（如财务、技术等）进行会签\n5. 管理层审批：根据合同金额和重要性，由不同级别的管理层审批\n6. 法定代表人或授权代表签字：完成最终审批\n7. 盖章：加盖公司公章，使合同正式生效\n8. 合同归档：将合同及相关文件进行归档保存",legal_doc,contract_approval,2023-03-10
+"商标侵权是指未经商标权人许可，在相同或类似商品上使用与其注册商标相同或近似的商标，或者其他侵犯注册商标专用权的行为。处理商标侵权问题的步骤包括：\n1. 证据收集：收集侵权证据，如侵权产品、宣传材料等\n2. 法律分析：确定是否构成侵权，评估侵权程度\n3. 发送律师函：要求侵权方立即停止侵权行为\n4. 行政投诉：向市场监督管理部门投诉\n5. 诉讼准备：如行政途径无法解决，准备诉讼材料\n6. 提起诉讼：向人民法院提起民事诉讼\n7. 执行判决：法院判决后，确保判决得到执行",legal_doc,trademark_infringement,2023-04-05
+"数据安全合规要求主要包括：\n1. 数据分类分级：根据数据敏感性进行分类管理\n2. 数据收集合法性：确保数据收集有合法依据和用户授权\n3. 数据存储安全：采取加密、访问控制等技术措施保护数据\n4. 数据处理限制：仅在必要范围内处理个人数据\n5. 数据跨境传输：遵守相关法律对数据出境的限制\n6. 数据主体权利保障：确保用户知情权、同意权、更正权等\n7. 数据安全事件应对：建立数据泄露应急响应机制\n8. 合规审计：定期进行数据安全合规审计\n\n相关法律法规包括《网络安全法》、《数据安全法》、《个人信息保护法》等。",legal_doc,data_security,2023-05-20

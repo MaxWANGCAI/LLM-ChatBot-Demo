@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能知识库助手</title>
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .kb-selector {
+            margin-bottom: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .kb-selector h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #1890ff;
+        }
+        .recommendations {
+            margin-bottom: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .recommendations h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #1890ff;
+            font-size: 16px;
+        }
+        .recommendation-items {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .recommendation-item {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f0f7ff;
+            border: 1px solid #d6e8ff;
+            padding: 12px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .recommendation-item:hover {
+            background-color: #e6f7ff;
+            border-color: #91d5ff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            box-sizing: border-box;
+        }
+        .chat-header {
+            background-color: #1890ff;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+        }
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            position: relative;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+        .user-message {
+            align-self: flex-end;
+            background-color: #1890ff;
+            color: white;
+            border-radius: 8px 0 8px 8px;
+        }
+        .bot-message {
+            align-self: flex-start;
+            background-color: #f0f2f5;
+            color: #333;
+            border-radius: 0 8px 8px 8px;
+        }
+        .message-source {
+            font-size: 12px;
+            color: #888;
+            margin-top: 4px;
+        }
+        .input-area {
+            display: flex;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #e8e8e8;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+        }
+        .input-area input:focus {
+            border-color: #1890ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+        .input-area button {
+            margin-left: 10px;
+            padding: 0 20px;
+            background-color: #1890ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .input-area button:hover {
+            background-color: #40a9ff;
+        }
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(24, 144, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #1890ff;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* 思考状态的样式 */
+        .thinking {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+        }
+        
+        .thinking-dots {
+            display: inline-flex;
+        }
+        
+        .thinking-dots span {
+            animation: thinking 1.4s infinite ease-in-out both;
+            font-size: 20px;
+            margin: 0 2px;
+        }
+        
+        .thinking-dots span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .thinking-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .thinking-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes thinking {
+            0%, 80%, 100% { 
+                transform: scale(0.6);
+                opacity: 0.2;
+            }
+            40% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        /* 响应式设计 - 媒体查询 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .recommendation-items {
+                flex-direction: column;
+            }
+            .recommendation-item {
+                min-width: auto;
+            }
+            .message {
+                max-width: 90%;
+            }
+            .input-area {
+                padding: 10px;
+            }
+            .input-area input {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .input-area button {
+                padding: 0 15px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .kb-selector, .recommendations, .chat-container {
+                border-radius: 8px;
+                padding: 10px;
+            }
+            .chat-header {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+            .chat-messages {
+                padding: 10px;
+                gap: 10px;
+            }
+            .message {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 知识库选择区域 -->
+        <div class="kb-selector">
+            <h3>法务知识库助手</h3>
+            <div>
+                <select id="kbSelector" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #d9d9d9;">
+                    <option value="all">全部知识库</option>
+                    <option value="legal">法律知识库</option>
+                    <option value="business">业务知识库</option>
+                    <option value="customer">客服知识库</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- 推荐问题区域 -->
+        <div class="recommendations">
+            <h3>您可能想问：</h3>
+            <div class="recommendation-items" id="recommendationItems">
+                <!-- 推荐问题将在这里显示 -->
+                <div class="recommendation-item">加载中...</div>
+                <div class="recommendation-item">加载中...</div>
+                <div class="recommendation-item">加载中...</div>
+            </div>
+        </div>
+        
+        <!-- 聊天区域 -->
+        <div class="chat-container">
+            <div class="chat-header">
+                智能知识库助手
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    您好，我是智能知识库助手，有什么可以帮您解答的问题吗？
+                </div>
+            </div>
+            <div class="input-area">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="请输入您的问题..." 
+                    autocomplete="off"
+                    onkeydown="if(event.key==='Enter') sendMessage()"
+                >
+                <button onclick="sendMessage()" id="sendButton">发送</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 页面加载完成后加载推荐问题
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRecommendations();
+            
+            // 知识库切换时重新加载推荐问题
+            document.getElementById('kbSelector').addEventListener('change', function() {
+                loadRecommendations();
+            });
+            
+            // 窗口大小变化时调整布局
+            window.addEventListener('resize', function() {
+                adjustLayout();
+            });
+            
+            // 初始调整布局
+            adjustLayout();
+        });
+        
+        // 根据窗口大小调整布局
+        function adjustLayout() {
+            const container = document.querySelector('.container');
+            const windowHeight = window.innerHeight;
+            const windowWidth = window.innerWidth;
+            
+            // 确保聊天容器高度合适
+            const chatContainer = document.querySelector('.chat-container');
+            const otherElementsHeight = document.querySelector('.kb-selector').offsetHeight + 
+                                        document.querySelector('.recommendations').offsetHeight +
+                                        40; // 容器padding
+            
+            const availableHeight = windowHeight - otherElementsHeight;
+            chatContainer.style.height = Math.max(300, availableHeight) + 'px';
+            
+            // 移动设备上调整推荐问题显示
+            const recommendationItems = document.querySelectorAll('.recommendation-item');
+            if (windowWidth <= 768) {
+                recommendationItems.forEach(item => {
+                    item.style.minWidth = 'calc(100% - 20px)';
+                });
+            } else {
+                recommendationItems.forEach(item => {
+                    item.style.minWidth = '200px';
+                });
+            }
+        }
+        
+        // 加载推荐问题
+        function loadRecommendations() {
+            const kbType = document.getElementById('kbSelector').value;
+            
+            fetch(`/api/recommended-questions?count=3&kb_type=${kbType}`)
+                .then(response => response.json())
+                .then(data => {
+                    const recommendationItems = document.getElementById('recommendationItems');
+                    recommendationItems.innerHTML = '';
+                    
+                    if (data.recommendations && data.recommendations.length > 0) {
+                        data.recommendations.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'recommendation-item';
+                            div.textContent = item.question;
+                            div.setAttribute('data-id', item.id);
+                            div.onclick = function() { 
+                                askRecommendedQuestion(item.id, item.question);
+                            };
+                            recommendationItems.appendChild(div);
+                        });
+                    } else {
+                        recommendationItems.innerHTML = '<div class="recommendation-item">暂无推荐问题</div>';
+                    }
+                    
+                    // 更新布局
+                    adjustLayout();
+                })
+                .catch(error => {
+                    console.error('加载推荐问题失败:', error);
+                    recommendationItems.innerHTML = '<div class="recommendation-item">加载推荐问题失败</div>';
+                });
+        }
+        
+        // 发送消息
+        function sendMessage() {
+            const userInput = document.getElementById('userInput');
+            const message = userInput.value.trim();
+            
+            if (!message) return;
+            
+            // 添加用户消息到聊天区域
+            addUserMessage(message);
+            
+            // 清空输入框
+            userInput.value = '';
+            
+            // 禁用发送按钮，显示加载状态
+            const sendButton = document.getElementById('sendButton');
+            sendButton.disabled = true;
+            sendButton.innerHTML = '发送中 <span class="loading"></span>';
+            
+            // 添加思考中的消息
+            const chatMessages = document.getElementById('chatMessages');
+            const thinkingDiv = document.createElement('div');
+            thinkingDiv.className = 'message bot-message thinking';
+            thinkingDiv.innerHTML = '<span class="thinking-dots"><span>.</span><span>.</span><span>.</span></span>';
+            chatMessages.appendChild(thinkingDiv);
+            
+            // 滚动到底部
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // 发送请求到后端
+            fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    question: message,
+                    kb_type: document.getElementById('kbSelector').value
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 移除思考中的消息
+                chatMessages.removeChild(thinkingDiv);
+                
+                // 添加机器人回复到聊天区域
+                addBotMessage(data.answer, data.sources);
+                
+                // 重新加载推荐问题
+                loadRecommendations();
+            })
+            .catch(error => {
+                console.error('发送消息失败:', error);
+                
+                // 移除思考中的消息
+                chatMessages.removeChild(thinkingDiv);
+                
+                addBotMessage('很抱歉，处理您的请求时出现了错误，请稍后再试。', []);
+            })
+            .finally(() => {
+                // 恢复发送按钮状态
+                sendButton.disabled = false;
+                sendButton.innerHTML = '发送';
+            });
+        }
+        
+        // 使用预设问题
+        function askRecommendedQuestion(questionId, questionText) {
+            // 添加用户消息到聊天区域
+            addUserMessage(questionText);
+            
+            // 禁用发送按钮，显示加载状态
+            const sendButton = document.getElementById('sendButton');
+            sendButton.disabled = true;
+            sendButton.innerHTML = '发送中 <span class="loading"></span>';
+            
+            // 添加思考中的消息
+            const chatMessages = document.getElementById('chatMessages');
+            const thinkingDiv = document.createElement('div');
+            thinkingDiv.className = 'message bot-message thinking';
+            thinkingDiv.innerHTML = '<span class="thinking-dots"><span>.</span><span>.</span><span>.</span></span>';
+            chatMessages.appendChild(thinkingDiv);
+            
+            // 滚动到底部
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // 添加随机延迟，模拟思考过程 (1-2秒)
+            const delay = Math.floor(Math.random() * 1000) + 1000;
+            
+            setTimeout(() => {
+                // 从预设回答获取响应
+                fetch(`/api/quick-answer/${questionId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // 移除思考中的消息
+                        chatMessages.removeChild(thinkingDiv);
+                        
+                        // 添加机器人回复到聊天区域
+                        addBotMessage(data.answer, [], data.source_type);
+                        
+                        // 重新加载推荐问题
+                        loadRecommendations();
+                    })
+                    .catch(error => {
+                        console.error('获取预设回答失败:', error);
+                        
+                        // 移除思考中的消息
+                        chatMessages.removeChild(thinkingDiv);
+                        
+                        // 如果获取预设回答失败，则尝试发送普通查询
+                        fetch('/api/chat', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                question: questionText,
+                                kb_type: document.getElementById('kbSelector').value
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            addBotMessage(data.answer, data.sources);
+                        })
+                        .catch(err => {
+                            addBotMessage('很抱歉，处理您的请求时出现了错误，请稍后再试。', []);
+                        });
+                    })
+                    .finally(() => {
+                        // 恢复发送按钮状态
+                        sendButton.disabled = false;
+                        sendButton.innerHTML = '发送';
+                    });
+            }, delay);
+        }
+        
+        // 添加用户消息
+        function addUserMessage(message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const div = document.createElement('div');
+            div.className = 'message user-message';
+            div.textContent = message;
+            chatMessages.appendChild(div);
+            
+            // 滚动到底部
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // 添加机器人消息
+        function addBotMessage(message, sources = [], sourceType = null) {
+            const chatMessages = document.getElementById('chatMessages');
+            
+            // 消息内容
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot-message';
+            
+            // 处理换行符
+            const formattedMessage = message.replace(/\n/g, '<br>');
+            messageDiv.innerHTML = formattedMessage;
+            
+            // 如果有来源信息，添加来源（忽略"预设回答"）
+            if (sourceType && sourceType !== "预设回答") {
+                const sourceDiv = document.createElement('div');
+                sourceDiv.className = 'message-source';
+                sourceDiv.textContent = `来源: ${sourceType}`;
+                messageDiv.appendChild(sourceDiv);
+            } else if (sources && sources.length > 0) {
+                const sourceDiv = document.createElement('div');
+                sourceDiv.className = 'message-source';
+                sourceDiv.textContent = `来源: ${sources.map(s => s.title || s.source).join(', ')}`;
+                messageDiv.appendChild(sourceDiv);
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            
+            // 滚动到底部
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // 更新布局
+            adjustLayout();
+        }
+    </script>
+</body>
+</html> 

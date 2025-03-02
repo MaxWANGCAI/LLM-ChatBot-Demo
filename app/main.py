@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Depends, HTTPException
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,6 +11,10 @@ import asyncio
 from typing import Set
 from app.config.settings import settings
 from app.utils.es_client import es_client
+from app.utils.es_init import init_elasticsearch_indices
+from app.api.routers.chat import router as chat_router
+from app.api.routers.recommendations import router as recommendations_router
+from app.utils.logger import configure_global_logging, qa_logger
 
 # 配置日志
 logging.basicConfig(
@@ -22,7 +27,7 @@ logger = logging.getLogger(__name__)
 running_services: Set[str] = set()
 shutdown_event = asyncio.Event()
 
-app = FastAPI(title="智能知识库助手")
+app = FastAPI(title="智能知识库助手", version="1.0.0")
 
 # 配置跨域
 app.add_middleware(
@@ -34,19 +39,21 @@ app.add_middleware(
 )
 
 # 挂载静态文件
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 # 配置模板
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 
-# 导入路由
-from app.api.routers import chat
+# 日志配置
+configure_global_logging()
 
 # 注册路由
-app.include_router(chat.router, prefix="/api")
+app.include_router(chat_router, prefix="/api", tags=["chat"])
+app.include_router(recommendations_router, prefix="/api", tags=["recommendations"])
 
-@app.get("/")
-async def index(request: Request):
+@app.get("/", response_class=HTMLResponse)
+async def home(request: Request):
+    """返回首页"""
     return templates.TemplateResponse("index.html", {"request": request})
 
 async def cleanup_service(service_name: str) -> None:
@@ -74,34 +81,34 @@ async def cleanup_all_services():
     logger.info("所有服务已清理完成")
 
 @app.on_event("startup")
-async def startup_event():
-    """服务启动时的初始化操作"""
-    try:
-        # 检查 Elasticsearch 连接
-        if not await es_client.ping():
-            logger.error("无法连接到 Elasticsearch")
-            raise Exception("Elasticsearch 连接失败")
-        running_services.add("elasticsearch")
-        logger.info("Elasticsearch 连接成功")
-
-        # 检查必要的环境变量
-        if not settings.DASHSCOPE_API_KEY:
-            logger.error("未设置 DASHSCOPE_API_KEY")
-            raise Exception("缺少必要的环境变量: DASHSCOPE_API_KEY")
-        
-        running_services.add("fastapi")
-        logger.info("所有初始化检查完成")
-    except Exception as e:
-        logger.error(f"服务启动初始化失败: {str(e)}")
-        raise e
+async def startup_db_client():
+    """服务启动事件"""
+    qa_logger.log_info("应用服务启动...")
+    
+    # 检查Elasticsearch连接
+    es_connected = await es_client.ping()
+    if not es_connected:
+        qa_logger.log_error("Elasticsearch 连接失败")
+        raise HTTPException(status_code=500, detail="Elasticsearch 连接失败")
+    else:
+        qa_logger.log_info("Elasticsearch 连接成功")
+    
+    # 检查环境变量
+    if not settings.DASHSCOPE_API_KEY:
+        qa_logger.log_warning("未设置 DASHSCOPE_API_KEY 环境变量，使用测试密钥")
+    else:
+        qa_logger.log_info("DASHSCOPE_API_KEY 已配置")
+    
+    qa_logger.log_info("服务启动成功")
 
 @app.on_event("shutdown")
-async def shutdown_event():
-    """服务关闭时的清理操作"""
-    try:
-        await cleanup_all_services()
-    except Exception as e:
-        logger.error(f"服务关闭清理失败: {str(e)}")
+async def shutdown_db_client():
+    """服务关闭事件"""
+    qa_logger.log_info("应用服务关闭...")
+    
+    # 这里可以添加清理资源的代码
+    
+    qa_logger.log_info("服务已完全关闭")
 
 def signal_handler(signum, frame):
     """处理系统信号"""
@@ -118,26 +125,12 @@ def setup_signal_handlers():
     # 处理终端关闭
     signal.signal(signal.SIGTERM, signal_handler)
 
-class UvicornServer:
-    """Uvicorn 服务器封装类"""
-    def __init__(self, app, host="0.0.0.0", port=8000):
-        self.config = uvicorn.Config(
-            app,
-            host=host,
-            port=port,
-            reload=True,
-            log_level="debug"
-        )
-        self.server = uvicorn.Server(self.config)
-    
-    async def run(self):
-        """运行服务器"""
-        try:
-            await self.server.serve()
-        except Exception as e:
-            logger.error(f"服务器运行出错: {str(e)}")
-        finally:
-            await cleanup_all_services()
+class CustomServer(uvicorn.Server):
+    """自定义服务器类，用于处理优雅关闭"""
+    def handle_exit(self, sig, frame):
+        qa_logger.log_info(f"收到退出信号 {sig}...")
+        # 标记服务器应该退出
+        self.should_exit = True
 
 def main():
     """主函数，用于启动服务"""
@@ -150,7 +143,15 @@ def main():
         asyncio.set_event_loop(loop)
         
         # 创建服务器实例
-        server = UvicornServer("app.main:app")
+        server = CustomServer(
+            uvicorn.Config(
+                "app.main:app", 
+                host=settings.HOST, 
+                port=settings.PORT,
+                log_level="info",
+                reload=True
+            )
+        )
         
         # 运行服务器
         loop.run_until_complete(server.run())
@@ -165,4 +166,5 @@ def main():
         sys.exit(0)
 
 if __name__ == "__main__":
+    qa_logger.log_info("启动服务器...")
     main() 

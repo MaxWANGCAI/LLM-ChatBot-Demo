@@ -1,103 +1,214 @@
-# LangChain 知识库助手
+# LLM 智能问答系统
 
-基于 LangChain 和 FastAPI 开发的智能知识库助手系统，集成了法务知识库、业务流程及品类知识库、智能客服三个角色。
+一个基于大型语言模型（LLM）的智能问答系统，集成了混合检索、重排序和多知识库查询能力，可以根据用户的问题从多个知识库中检索相关信息并生成准确的回答。
 
-## 功能特点
+## 系统架构
 
-- 多角色知识库助手
-- 基于 Elasticsearch 的向量检索
-- 支持多轮对话
-- 现代化的 Web 界面
-- 灵活的大模型 API 调用
+![系统架构图](docs/images/architecture.png)
+
+本系统主要包含以下几个核心组件：
+
+1. **API服务层**：基于FastAPI构建的REST API服务，提供问答接口和管理接口
+2. **检索层**：混合检索和重排序系统，包括：
+   - 向量检索：使用OpenAI嵌入模型进行语义检索
+   - 关键词检索：使用Elasticsearch进行关键词匹配
+   - 重排序：使用DashScope重排序API对检索结果进行精确排序
+3. **对话处理层**：基于LangChain的对话处理系统，包括：
+   - 对话链：管理对话流程和上下文
+   - 提示模板：为不同场景定制LLM提示
+   - 对话记忆：管理对话历史
+4. **大语言模型层**：支持多种LLM，包括：
+   - 通义千问/灵积：阿里云DashScope API
+   - OpenAI GPT系列：GPT-3.5/GPT-4
+   - Anthropic Claude系列：Claude 3 Opus/Sonnet/Haiku
+5. **存储层**：
+   - Elasticsearch：存储文档和向量
+
+## 特性与优势
+
+- **混合检索**：结合向量检索和关键词检索的优势，提高检索准确性
+- **重排序**：使用DashScope重排序API对检索结果进行精确排序，减少噪声
+- **多知识库查询**：支持跨知识库查询和结果合并
+- **对话上下文管理**：智能管理对话历史，提供连贯的对话体验
+- **可扩展性**：模块化设计，易于扩展和定制
 
 ## 技术栈
 
-- 后端：FastAPI + LangChain + Elasticsearch
-- 前端：HTML + TailwindCSS
-- 向量数据库：Elasticsearch
+- **FastAPI**：高性能异步API框架
+- **LangChain**：大语言模型应用开发框架
+- **Elasticsearch**：全文搜索引擎和向量数据库
+- **DashScope**：阿里云AI大模型服务
+- **Python 3.9+**：编程语言
 
-## 环境要求
+## 安装与配置
 
-- Python 3.8+
+### 环境要求
+
+- Python 3.9 或更高版本
+- Conda 或 virtualenv 用于环境管理
 - Elasticsearch 8.x
-- OpenAI API Key
 
-## 安装步骤
+### 使用Conda安装
 
-1. 克隆项目：
 ```bash
-git clone <repository_url>
-cd langchain-kb-assistant
+# 克隆代码库
+git clone https://github.com/yourusername/llm-qa-system.git
+cd llm-qa-system
+
+# 创建并激活conda环境
+conda env create -f environment.yml
+conda activate env4LLM
+
+# 配置环境变量
+cp .env.example .env
+# 编辑.env文件，填入API密钥和配置信息
 ```
 
-2. 创建虚拟环境：
+### 手动安装
+
 ```bash
+# 创建并激活虚拟环境
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# 或
-.\venv\Scripts\activate  # Windows
-```
+venv\Scripts\activate  # Windows
 
-3. 安装依赖：
-```bash
+# 安装依赖
 pip install -r requirements.txt
+
+# 配置环境变量
+cp .env.example .env
+# 编辑.env文件，填入API密钥和配置信息
 ```
 
-4. 配置环境变量：
-创建 `.env` 文件并添加以下配置：
-```
-OPENAI_API_KEY=your_api_key_here
-```
+## 快速开始
 
-5. 启动 Elasticsearch：
-确保 Elasticsearch 服务已经启动并运行在默认端口 (9200)。
+### 启动服务
 
-6. 运行应用：
 ```bash
-uvicorn app.main:app --reload
+# 开发模式启动
+uvicorn app.main:app --reload --port 8000
+
+# 生产模式启动
+gunicorn app.main:app -k uvicorn.workers.UvicornWorker -w 4 --bind 0.0.0.0:8000
 ```
 
-访问 http://localhost:8000 即可使用系统。
+### API文档
 
-## 项目结构
+启动服务后，访问以下URL查看API文档：
 
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
+
+## 使用示例
+
+### 问答API
+
+```python
+import requests
+import json
+
+url = "http://localhost:8000/api/v1/qa"
+
+payload = json.dumps({
+  "query": "什么是智能检索系统?",
+  "conversation_id": "conv_123",
+  "knowledge_base_ids": ["kb_general", "kb_tech"],
+  "streaming": True
+})
+
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer YOUR_API_KEY'
+}
+
+response = requests.post(url, headers=headers, data=payload)
+print(response.json())
 ```
-app/
-├── api/
-│   └── routers/
-│       └── chat.py
-├── core/
-│   ├── agents/
-│   │   └── assistant.py
-│   └── chains/
-│       └── conversation_chain.py
-├── data/
-│   ├── legal_kb.csv
-│   ├── business_kb.csv
-│   └── customer_kb.csv
-├── utils/
-│   ├── es_client.py
-│   └── knowledge_base.py
-├── config/
-│   └── settings.py
-└── main.py
-templates/
-└── index.html
+
+### 混合检索与重排序
+
+```python
+from elasticsearch import AsyncElasticsearch
+from app.core.retrievers.hybrid_retriever import HybridRetriever
+from app.core.embeddings.dashscope_embeddings import DashScopeEmbeddings
+from app.core.retrievers.reranker import DashScopeReranker
+
+# 初始化组件
+es_client = AsyncElasticsearch([{"host": "localhost", "port": 9200}])
+embeddings = DashScopeEmbeddings(model="text-embedding-v1")
+reranker = DashScopeReranker(model="rerank-v1")
+
+# 创建混合检索器
+retriever = HybridRetriever(
+    es_client=es_client,
+    index_name="my_knowledge_base",
+    embedding_model=embeddings,
+    reranker=reranker
+)
+
+# 执行检索
+async def search():
+    results = await retriever.retrieve(
+        query="什么是向量数据库?", 
+        top_k=5
+    )
+    for doc in results:
+        print(f"Score: {doc['score']}, Title: {doc['title']}")
 ```
 
-## 使用说明
+### 使用LangChain的对话链
 
-1. 选择助手类型（法务/业务/客服）
-2. 输入问题并发送
-3. 系统会从相应知识库中检索相关信息并生成回答
-4. 支持多轮对话，可以通过"清除上下文"按钮开始新的对话
+```python
+from langchain.chains import ConversationalRetrievalChain
+from langchain.memory import ConversationBufferMemory
+from langchain.llms import DashScope
+from app.core.retrievers.hybrid_retriever import HybridRetriever
 
-## 注意事项
+# 初始化LLM
+llm = DashScope(model_name="qwen-turbo")
 
-- 首次运行时，系统会自动初始化知识库
-- 请确保 OpenAI API Key 配置正确
-- 建议在生产环境中适当调整配置参数
+# 初始化检索器
+retriever = HybridRetriever(...)
 
-## License
+# 创建对话内存
+memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=True
+)
 
-MIT
+# 创建对话链
+qa_chain = ConversationalRetrievalChain.from_llm(
+    llm=llm,
+    retriever=retriever,
+    memory=memory
+)
+
+# 执行问答
+response = qa_chain({"question": "什么是向量数据库?"})
+print(response["answer"])
+```
+
+## 测试
+
+```bash
+# 运行所有测试
+python -m pytest
+
+# 运行特定测试
+python -m pytest app/tests/test_qa.py -v
+
+# 运行测试并生成覆盖率报告
+python -m pytest --cov=app
+```
+
+## 贡献指南
+
+1. Fork 项目
+2. 创建特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 创建Pull Request
+
+## 许可证
+
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件

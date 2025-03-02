@@ -4,7 +4,7 @@ def test_role_specific_queries():
     """测试针对不同角色的查询"""
     test_cases = [
         {
-            "role": "business",  # 业务知识库助手
+            "role": "business",  # 业务内部知识库助手
             "queries": [
                 "公司的主要业务范围有哪些？",
                 "如何申请新项目立项？",
@@ -14,7 +14,7 @@ def test_role_specific_queries():
             ]
         },
         {
-            "role": "customer_service",  # 智能客服
+            "role": "customer",  # 客服知识库助手
             "queries": [
                 "如何修改订单信息？",
                 "退款流程是怎样的？",
@@ -111,4 +111,4 @@ if __name__ == "__main__":
     # 3. 测试跨领域问题
     test_cross_domain_queries()
     
-    print("\n测试完成！") 
+    print("\n测试完成！")

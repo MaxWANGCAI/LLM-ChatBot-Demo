@@ -1,0 +1,77 @@
+# 测试配置文件
+
+# 验证规则配置
+validation_rules:
+  基本规则:
+    min_answer_length: 10  # 最小回答长度
+    max_response_time: 10  # 最大响应时间（秒）
+    required_fields: ["answer", "sources"]  # 必需字段
+    retry_times: 3  # 重试次数
+    retry_interval: 1  # 重试间隔（秒）
+
+  知识库规则:
+    min_sources: 1  # 最小知识库引用数
+    max_sources: 5  # 最大知识库引用数
+    source_timeout: 5  # 知识库查询超时时间（秒）
+
+  错误处理规则:
+    critical_errors:
+      - NotFoundError  # Elasticsearch 索引不存在
+      - ConnectionError  # 连接错误
+      - AuthenticationError  # 认证错误
+    max_critical_errors: 3  # 最大严重错误数
+
+  性能监控规则:
+    memory_threshold: 80  # 内存使用率阈值（%）
+    cpu_threshold: 70  # CPU使用率阈值（%）
+    es_query_timeout: 3  # ES查询超时时间（秒）
+
+# 测试用例配置
+test_cases:
+  基础对话测试:
+    - question: "你好"
+      kb_type: "general"
+      expected:
+        min_length: 5
+        keywords: ["你好", "您好", "欢迎"]
+        required_source_types: []
+      timeout: 5  # 单个用例超时时间（秒）
+      retry_enabled: true  # 是否启用重试
+
+    - question: "请介绍一下你自己"
+      kb_type: "general"
+      expected:
+        min_length: 20
+        keywords: ["助手", "帮助", "服务"]
+        required_source_types: []
+      timeout: 5
+      retry_enabled: true
+
+  法律助手测试:
+    - question: "什么是知识产权保护？"
+      kb_type: "legal"
+      expected:
+        min_length: 50
+        keywords: ["知识产权", "保护", "法律"]
+        required_source_types: ["legal_doc"]
+      timeout: 8
+      retry_enabled: true
+
+  商业助手测试:
+    - question: "如何制定有效的营销策略？"
+      kb_type: "business"
+      expected:
+        min_length: 50
+        keywords: ["营销", "策略", "市场"]
+        required_source_types: ["business_doc"]
+      timeout: 8
+      retry_enabled: true
+
+# 报告生成配置
+report_config:
+  report_template: "templates/test_report.html"  # 报告模板路径
+  report_dir: "test_reports"  # 报告保存目录
+  keep_reports: 10  # 保留最近的报告数量
+  image_format: "png"  # 图表格式
+  image_dpi: 300  # 图表分辨率
+  enable_coverage_report: true  # 是否生成覆盖率报告

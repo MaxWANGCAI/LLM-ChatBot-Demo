@@ -7,7 +7,10 @@ logger = logging.getLogger(__name__)
 class ESClient:
     def __init__(self):
         self.client = Elasticsearch(
-            f"http://{settings.ELASTICSEARCH_HOST}:{settings.ELASTICSEARCH_PORT}"
+            f"http://{settings.ELASTICSEARCH_HOST}:{settings.ELASTICSEARCH_PORT}",
+            timeout=settings.ELASTICSEARCH_TIMEOUT,
+            max_retries=settings.ELASTICSEARCH_MAX_RETRIES,
+            retry_on_timeout=settings.ELASTICSEARCH_RETRY_ON_TIMEOUT
         )
     
     def search_similar(self, index_name: str, query_vector: list, top_k: int = 3):
@@ -33,4 +36,19 @@ class ESClient:
             logger.error(f"Error searching documents: {e}")
             return []
 
-es_client = ESClient() 
+    async def ping(self) -> bool:
+        """
+        检查Elasticsearch连接是否可用
+        
+        Returns:
+            bool: 连接可用返回True，否则返回False
+        """
+        try:
+            # 使用info()方法替代ping()，但不使用await
+            info = self.client.info()
+            return True
+        except Exception as e:
+            logger.error(f"Elasticsearch连接测试失败: {str(e)}")
+            return False
+
+es_client = ESClient()

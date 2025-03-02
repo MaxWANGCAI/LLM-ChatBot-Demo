@@ -2,3 +2,12 @@ __pycache__/
 *.pyc
 .env
 .idea
+test_reports/*
+
+# 数据文件夹
+data/production/
+app/data/
+
+# 保留示例数据
+!data/examples/
+!data/examples/*.csv

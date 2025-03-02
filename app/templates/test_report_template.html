@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>问答系统测试报告</title>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            line-height: 1.6;
+        }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin-bottom: 20px; 
+        }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #f2f2f2; 
+        }
+        .success { color: green; }
+        .failed { color: orange; }
+        .error { color: red; }
+        .summary-box { 
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .chart-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .coverage-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .coverage-box {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>问答系统测试报告</h1>
+    <p>生成时间: {{timestamp}}</p>
+    
+    <div class="summary-box">
+        <h2>测试概要</h2>
+        <ul>
+            <li>总测试用例数: {{total_tests}}</li>
+            <li>成功用例数: <span class="success">{{successful_tests}}</span></li>
+            <li>失败用例数: <span class="failed">{{failed_tests}}</span></li>
+            <li>错误用例数: <span class="error">{{error_tests}}</span></li>
+            <li>平均响应时间: {{avg_response_time}}秒</li>
+            <li>严重错误数: {{critical_error_count}}</li>
+        </ul>
+    </div>
+    
+    <div class="summary-box">
+        <h2>测试覆盖率</h2>
+        <div class="coverage-info">
+            <div class="coverage-box">
+                <h3>代码覆盖率</h3>
+                <ul>
+                    <li>语句覆盖率: {{code_coverage.statement_coverage}}%</li>
+                    <li>分支覆盖率: {{code_coverage.branch_coverage}}%</li>
+                    <li>函数覆盖率: {{code_coverage.function_coverage}}%</li>
+                </ul>
+            </div>
+            <div class="coverage-box">
+                <h3>知识库覆盖率</h3>
+                <ul>
+                    <li>通用知识库: {{kb_coverage.general}}%</li>
+                    <li>法律知识库: {{kb_coverage.legal}}%</li>
+                    <li>商业知识库: {{kb_coverage.business}}%</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>验证结果统计</h2>
+        <ul>
+            <li>总检查项: {{validation_summary.total_checks}}</li>
+            <li>通过检查项: {{validation_summary.passed_checks}}</li>
+            <li>检查通过率: {{validation_summary.pass_rate}}%</li>
+        </ul>
+        <h3>失败规则统计</h3>
+        <ul>
+            {{#validation_summary.failed_rules}}
+            <li>{{rule}}: {{count}}次</li>
+            {{/validation_summary.failed_rules}}
+        </ul>
+    </div>
+    
+    <h2>类别统计</h2>
+    {{category_stats_table}}
+    
+    <div class="chart-container">
+        <h2>响应时间分布</h2>
+        <img src="response_time_dist_{{timestamp}}.png" alt="响应时间分布">
+    </div>
+    
+    <div class="chart-container">
+        <h2>类别成功率</h2>
+        <img src="category_success_rate_{{timestamp}}.png" alt="类别成功率">
+    </div>
+    
+    <h2>详细测试结果</h2>
+    {{detailed_results_table}}
+</body>
+</html>

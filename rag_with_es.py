@@ -74,16 +74,20 @@ class RAGWithES:
             for i, ctx in enumerate(contexts)
         ])
         
-        prompt = f"""请基于以下相关文档回答问题。
+        prompt = f"""请基于以下相关文档回答问题。请严格遵循以下规则：
+
+1. 只使用相关文档中提供的信息来回答问题
+2. 如果相关文档中没有足够的信息，请明确说明"抱歉，根据现有信息无法完整回答这个问题"
+3. 不要添加、推测或编造任何相关文档中未提及的信息
+4. 如果对某些细节不确定，请明确指出不确定的部分
+5. 回答时要引用相关文档的编号，说明信息来源
 
 相关文档：
 {context_text}
 
 用户问题：{query}
 
-请提供详细的回答："""
-        
-        return prompt
+请基于以上规则提供回答："""
 
     def query(self, query: str, top_k: int = 3) -> str:
         """完整的RAG查询流程"""
@@ -109,4 +113,4 @@ def main():
         print("-" * 50)
 
 if __name__ == "__main__":
-    main() 
+    main()

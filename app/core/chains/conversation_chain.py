@@ -20,7 +20,7 @@ class CustomRetriever(BaseRetriever, BaseModel):
     index_name: str = Field(description="Elasticsearch 索引名称")
     
     def __init__(self, kb_type: str, **kwargs: Any):
-        index_name = f"{settings.ELASTICSEARCH_INDEX_PREFIX}_{kb_type}"
+        index_name = f"{settings.ELASTICSEARCH_INDEX_PREFIX}_base_{kb_type}"
         super().__init__(kb_type=kb_type, index_name=index_name, **kwargs)
     
     async def aget_relevant_documents(self, query: str) -> List[Document]:
