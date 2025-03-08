@@ -10,7 +10,7 @@
 
 1. **API服务层**：基于FastAPI构建的REST API服务，提供问答接口和管理接口
 2. **检索层**：混合检索和重排序系统，包括：
-   - 向量检索：使用OpenAI嵌入模型进行语义检索
+   - 向量检索：使用DashScope的text-embedding-v2模型进行语义检索
    - 关键词检索：使用Elasticsearch进行关键词匹配
    - 重排序：使用DashScope重排序API对检索结果进行精确排序
 3. **对话处理层**：基于LangChain的对话处理系统，包括：
@@ -135,7 +135,7 @@ from app.core.retrievers.reranker import DashScopeReranker
 
 # 初始化组件
 es_client = AsyncElasticsearch([{"host": "localhost", "port": 9200}])
-embeddings = DashScopeEmbeddings(model="text-embedding-v1")
+embeddings = DashScopeEmbeddings(model="text-embedding-v2")
 reranker = DashScopeReranker(model="rerank-v1")
 
 # 创建混合检索器

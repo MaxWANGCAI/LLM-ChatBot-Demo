@@ -44,14 +44,9 @@ def init_elasticsearch_indices():
             logger.error("无法连接到 Elasticsearch")
             return False
         
-        # 创建必要的索引
-        kb_types = ["general", "legal", "business", "customer"]
-        success = True
-        
-        for kb_type in kb_types:
-            index_name = f"{settings.ELASTICSEARCH_INDEX_PREFIX}_base_{kb_type}"
-            if not create_index(es_client, index_name):
-                success = False
+        # 创建统一索引
+        index_name = settings.ELASTICSEARCH_INDEX_NAME
+        success = create_index(es_client, index_name)
         
         return success
     except Exception as e:
@@ -69,4 +64,4 @@ if __name__ == "__main__":
     if init_elasticsearch_indices():
         print("所有索引初始化成功")
     else:
-        print("索引初始化失败，请检查日志") 
+        print("索引初始化失败，请检查日志")

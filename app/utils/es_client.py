@@ -12,28 +12,40 @@ class ESClient:
             max_retries=settings.ELASTICSEARCH_MAX_RETRIES,
             retry_on_timeout=settings.ELASTICSEARCH_RETRY_ON_TIMEOUT
         )
+        self.index_name = settings.ELASTICSEARCH_INDEX_NAME
     
-    def search_similar(self, index_name: str, query_vector: list, top_k: int = 3):
+    def search_similar(self, query_vector: list, role: str = None, top_k: int = 3):
         """搜索相似文档"""
         try:
-            response = self.client.search(
-                index=index_name,
-                body={
+            query = {
+                "script_score": {
                     "query": {
-                        "script_score": {
-                            "query": {"match_all": {}},
-                            "script": {
-                                "source": "cosineSimilarity(params.query_vector, 'vector') + 1.0",
-                                "params": {"query_vector": query_vector}
-                            }
+                        "bool": {
+                            "must": [{"match_all": {}}]
                         }
                     },
-                    "size": top_k
+                    "script": {
+                        "source": "cosineSimilarity(params.query_vector, 'embedding')",
+                        "params": {"query_vector": query_vector}
+                    }
                 }
+            }
+
+            # 如果指定了角色，添加角色过滤
+            if role:
+                query["script_score"]["query"]["bool"]["must"].append({
+                    "term": {"metadata.role": role}
+                })
+
+            response = self.client.search(
+                index=self.index_name,
+                body={"query": query},
+                size=top_k
             )
             return response["hits"]["hits"]
+            
         except Exception as e:
-            logger.error(f"Error searching documents: {e}")
+            logger.error(f"搜索失败: {str(e)}")
             return []
 
     async def ping(self) -> bool:
@@ -49,6 +61,17 @@ class ESClient:
             return True
         except Exception as e:
             logger.error(f"Elasticsearch连接测试失败: {str(e)}")
+            return False
+
+    def delete_index(self):
+        """删除知识库索引"""
+        try:
+            if self.client.indices.exists(index=self.index_name):
+                self.client.indices.delete(index=self.index_name)
+                logger.info(f"成功删除索引: {self.index_name}")
+            return True
+        except Exception as e:
+            logger.error(f"删除索引时发生错误: {e}")
             return False
 
 es_client = ESClient()

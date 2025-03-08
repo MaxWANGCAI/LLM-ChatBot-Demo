@@ -9,8 +9,8 @@ def import_knowledge(es_manager, file_path, role=None):
     if os.path.exists(file_path):
         print(f"开始导入知识库: {file_path}")
         try:
-            # 读取CSV文件
-            df = pd.read_csv(file_path)
+            # 读取CSV文件，添加参数以正确处理包含JSON的CSV文件
+            df = pd.read_csv(file_path, quotechar='"', escapechar='\\', encoding='utf-8')
             total_docs = len(df)
             print(f"总共需要导入 {total_docs} 条数据")
             
@@ -53,6 +53,9 @@ def main():
     print("创建/更新索引配置...")
     es_manager.create_index()
     
+    # 获取当前脚本所在目录的绝对路径
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
     # 定义文件映射
     file_role_mapping = {
         "business_kb.csv": "business",
@@ -62,8 +65,8 @@ def main():
     
     # 导入每个文件
     for file_name, role in file_role_mapping.items():
-        file_path = os.path.join("app/data", file_name)
+        file_path = os.path.abspath(os.path.join(current_dir, "data/examples", file_name))
         import_knowledge(es_manager, file_path, role)
 
 if __name__ == "__main__":
-    main() 
+    main()

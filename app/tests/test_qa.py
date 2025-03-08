@@ -129,7 +129,7 @@ class TestQASystem:
             raise Exception(f"连接本地Elasticsearch服务失败: {str(e)}")
 
         # 检查索引存在性
-        required_indices = ["knowledge_base_general", "knowledge_base_legal", "knowledge_base_business", "knowledge_base_customer"]
+        required_indices = ["llm_index"]
         for index_name in required_indices:
             if not es.indices.exists(index=index_name):
                 # 尝试创建索引
@@ -1130,6 +1130,9 @@ class TestQASystem:
 async def main():
     """主函数"""
     runner = TestQASystem()
+    # 显示测试资源预估并获取用户确认
+    runner.show_estimation()
+    # 只有在用户确认后才会继续执行测试
     await runner.run_all_tests()
     report_path = runner.generate_report()
     print(f"测试报告已生成: {report_path}")
@@ -1137,6 +1140,9 @@ async def main():
 if __name__ == "__main__":
     async def run():
         runner = TestQASystem()
+        # 显示测试资源预估并获取用户确认
+        runner.show_estimation()
+        # 只有在用户确认后才会继续执行测试
         await runner.run_all_tests()
     
     asyncio.run(run())

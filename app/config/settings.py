@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     # Elasticsearch 配置
     ELASTICSEARCH_HOST: str = os.getenv("ELASTICSEARCH_HOST", "localhost")
     ELASTICSEARCH_PORT: int = int(os.getenv("ELASTICSEARCH_PORT", "9200"))
-    ELASTICSEARCH_INDEX_PREFIX: str = "knowledge"
+    ELASTICSEARCH_INDEX_NAME: str = os.getenv("ELASTICSEARCH_INDEX_NAME", "llm_index")
     ELASTICSEARCH_TIMEOUT: int = int(os.getenv("ELASTICSEARCH_TIMEOUT", "30"))
     ELASTICSEARCH_MAX_RETRIES: int = int(os.getenv("ELASTICSEARCH_MAX_RETRIES", "3"))
     ELASTICSEARCH_RETRY_ON_TIMEOUT: bool = True
@@ -31,9 +31,9 @@ class Settings(BaseSettings):
 
     # 知识库文件路径配置
     KNOWLEDGE_BASE_PATHS: dict = {
-        "legal": "data/production/legal_kb.csv",
-        "business": "data/production/business_kb.csv",
-        "customer": "data/production/customer_kb.csv"
+        "legal": os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data/examples/legal_kb.csv"),
+        "business": os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data/examples/business_kb.csv"),
+        "customer": os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data/examples/customer_kb.csv")
     }
 
 settings = Settings()

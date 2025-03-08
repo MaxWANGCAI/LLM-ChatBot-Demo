@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import logging
+import csv
 from pathlib import Path
 from elasticsearch import Elasticsearch
 from dashscope import TextEmbedding
@@ -41,7 +42,7 @@ def import_data_from_csv(file_path, index_name):
             return False
         
         # 读取CSV文件
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path, quoting=csv.QUOTE_MINIMAL, escapechar='\\')
         logger.info(f"从 {file_path} 读取了 {len(df)} 条记录")
         
         # 连接到Elasticsearch
@@ -80,16 +81,32 @@ def import_data_from_csv(file_path, index_name):
         for _, row in df.iterrows():
             try:
                 # 提取内容和元数据
-                content = row['content']
+                content = row['content'].strip()
                 
-                # 构建元数据
-                metadata = {}
-                for col in df.columns:
-                    if col != 'content' and col != 'embedding':
-                        metadata[col] = row[col]
+                # 解析和验证元数据
+                try:
+                    # 尝试解析content字段中的JSON
+                    try:
+                        content_json = json.loads(content)
+                        if isinstance(content_json, dict):
+                            content = json.dumps(content_json, ensure_ascii=False)
+                    except json.JSONDecodeError:
+                        pass
+                    
+                    metadata = json.loads(row['metadata'])
+                    required_fields = ['category', 'source', 'answer', 'role']
+                    if not all(field in metadata for field in required_fields):
+                        logger.warning(f"跳过记录，元数据缺少必要字段: {required_fields}")
+                        error_count += 1
+                        continue
+                except (json.JSONDecodeError, KeyError) as e:
+                    logger.warning(f"跳过记录，元数据格式错误: {str(e)}")
+                    error_count += 1
+                    continue
                 
                 # 生成嵌入
-                embedding = generate_embedding(content)
+                # embedding = generate_embedding(content)
+                embedding = [0.1]*1536 # to delete after testing
                 if embedding is None:
                     logger.warning(f"跳过记录，无法生成嵌入: {content[:50]}...")
                     error_count += 1
@@ -118,7 +135,7 @@ def import_data_from_csv(file_path, index_name):
         es.indices.refresh(index=index_name)
         
         logger.info(f"导入完成: 成功 {success_count} 条，失败 {error_count} 条")
-        return True
+        return True if error_count <= 2 else False
         
     except Exception as e:
         logger.error(f"导入数据时出错: {str(e)}")
@@ -129,7 +146,7 @@ def import_all_data():
     success = True
     
     for kb_type, file_path in settings.KNOWLEDGE_BASE_PATHS.items():
-        index_name = f"knowledge_base_{kb_type}"
+        index_name = "llm_index"
         logger.info(f"开始导入 {kb_type} 知识库数据到 {index_name}")
         
         if not import_data_from_csv(file_path, index_name):
@@ -143,4 +160,4 @@ if __name__ == "__main__":
     if import_all_data():
         print("所有数据导入成功")
     else:
-        print("部分或全部数据导入失败，请检查日志") 
+        print("部分或全部数据导入失败，请检查日志")

@@ -36,7 +36,7 @@ class KnowledgeBaseLoader:
     def process_documents(self, documents: List[Dict], kb_type: str):
         """处理文档并存入 Elasticsearch"""
         try:
-            index_name = f"{settings.ELASTICSEARCH_INDEX_PREFIX}_{kb_type}"
+            index_name = "llm_index"
             es_client.create_index(index_name)
             
             for doc in documents:
@@ -73,4 +73,4 @@ class KnowledgeBaseLoader:
                 logger.error(f"Error initializing {kb_type} knowledge base: {e}")
                 continue
 
-kb_loader = KnowledgeBaseLoader() 
+kb_loader = KnowledgeBaseLoader()
