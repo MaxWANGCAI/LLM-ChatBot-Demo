@@ -15,7 +15,14 @@ def create_index(es_client, index_name):
                         "properties": {
                             "content": {"type": "text"},
                             "embedding": {"type": "dense_vector", "dims": 1536},
-                            "metadata": {"type": "object"}
+                            "metadata": {
+                                "type": "object",
+                                "properties": {
+                                    "category": {"type": "keyword"},
+                                    "source": {"type": "keyword"},
+                                    "role": {"type": "keyword"}
+                                }
+                            }
                         }
                     }
                 }

@@ -110,6 +110,15 @@ class QALogger:
             '%(asctime)s - %(name)s - %(levelname)s - %(process)d - %(thread)d - %(message)s'
         )
         
+        # 确保移除已存在的处理器
+        for handler in self.app_logger.handlers[:] + self.qa_logger.handlers[:]:
+            handler.close()
+            if isinstance(handler, logging.Handler):
+                if handler in self.app_logger.handlers:
+                    self.app_logger.removeHandler(handler)
+                if handler in self.qa_logger.handlers:
+                    self.qa_logger.removeHandler(handler)
+        
         # 应用日志处理器（按大小轮转）
         app_handler = RotatingFileHandler(
             f"logs/app_{datetime.now().strftime('%Y%m%d')}.log",

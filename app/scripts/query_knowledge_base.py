@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 
 
 class KnowledgeBaseExplorer:
-    def __init__(self, host="localhost", port=9200, kb_type="legal"):
+    def __init__(self, host="localhost", port=9200):
         self.es_manager = ESManager(host=host, port=port)
         self.es = self.es_manager.es
         self.index_name = settings.ELASTICSEARCH_INDEX_NAME
@@ -134,7 +134,7 @@ class KnowledgeBaseExplorer:
             aggs = {
                 "roles": {
                     "terms": {
-                        "field": "metadata.role",
+                        "field": "metadata.role.keyword",
                         "size": 100  # 最多返回100个角色
                     }
                 }

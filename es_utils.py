@@ -23,7 +23,7 @@ class ESManager:
 
     def _get_embedding(self, text):
         """使用DashScope API获取文本嵌入向量"""
-        '''try:
+        try:
             response = TextEmbedding.call(
                 model=self.model_name,
                 input=text,
@@ -34,15 +34,15 @@ class ESManager:
             else:
                 raise Exception(f"API调用失败: {response.code} - {response.message}")
         except Exception as e:
-            raise Exception(f"获取嵌入向量失败: {str(e)}")'''
-        retun [0.1]*1536 # to delete after test
+            raise Exception(f"获取嵌入向量失败: {str(e)}")
+        # retun [0.1]*1536 # to delete after test
 
     def _batch_get_embeddings(self, texts, batch_size=32):
         """批量获取文本嵌入向量"""
         all_embeddings = []
         for i in range(0, len(texts), batch_size):
             batch_texts = texts[i:i + batch_size]
-            '''try:
+            try:
                 response = TextEmbedding.call(
                     model=self.model_name,
                     input=batch_texts,
@@ -53,8 +53,8 @@ class ESManager:
                 else:
                     raise Exception(f"API调用失败: {response.code} - {response.message}")
             except Exception as e:
-                raise Exception(f"批量获取嵌入向量失败: {str(e)}")'''
-            all_embeddings.extend(np.full((len(batch_texts),1536),0.1)) # to delete after test
+                raise Exception(f"批量获取嵌入向量失败: {str(e)}")
+            #all_embeddings.extend(np.full((len(batch_texts),1536),0.1)) # to delete after test
         return all_embeddings
 
     def create_index(self):

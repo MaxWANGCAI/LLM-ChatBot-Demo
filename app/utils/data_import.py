@@ -85,13 +85,13 @@ def import_data_from_csv(file_path, index_name):
                 
                 # 解析和验证元数据
                 try:
-                    # 尝试解析content字段中的JSON
+                    '''# 尝试解析content字段中的JSON
                     try:
                         content_json = json.loads(content)
                         if isinstance(content_json, dict):
                             content = json.dumps(content_json, ensure_ascii=False)
                     except json.JSONDecodeError:
-                        pass
+                        pass to delete'''
                     
                     metadata = json.loads(row['metadata'])
                     required_fields = ['category', 'source', 'answer', 'role']
@@ -105,8 +105,8 @@ def import_data_from_csv(file_path, index_name):
                     continue
                 
                 # 生成嵌入
-                # embedding = generate_embedding(content)
-                embedding = [0.1]*1536 # to delete after testing
+                embedding = generate_embedding(content)
+                # embedding = [0.1]*1536 # to delete after testing
                 if embedding is None:
                     logger.warning(f"跳过记录，无法生成嵌入: {content[:50]}...")
                     error_count += 1
@@ -115,7 +115,7 @@ def import_data_from_csv(file_path, index_name):
                 # 构建文档
                 doc = {
                     "content": content,
-                    "embedding": embedding,
+                    "embedding": embedding['embedding'],
                     "metadata": metadata
                 }
                 

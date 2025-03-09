@@ -1,6 +1,8 @@
 from elasticsearch import Elasticsearch
 from app.config.settings import settings
 import logging
+import json
+import traceback
 
 logger = logging.getLogger(__name__)
 
@@ -34,18 +36,30 @@ class ESClient:
             # 如果指定了角色，添加角色过滤
             if role:
                 query["script_score"]["query"]["bool"]["must"].append({
-                    "term": {"metadata.role": role}
+                    "term": {"metadata.role.keyword": role}
                 })
-
+    
+            # 记录搜索参数
+            logger.debug(f"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}")
+    
             response = self.client.search(
                 index=self.index_name,
                 body={"query": query},
                 size=top_k
             )
+    
+            # 记录搜索结果统计
+            total_hits = response["hits"]["total"]["value"]
+            max_score = response["hits"]["max_score"] if response["hits"]["hits"] else 0
+            logger.info(f"搜索完成：总匹配数={total_hits}, 最高分={max_score:.4f}")
+    
             return response["hits"]["hits"]
             
         except Exception as e:
-            logger.error(f"搜索失败: {str(e)}")
+            error_msg = str(e)
+            logger.error(f"搜索失败: {error_msg}")
+            if settings.DEBUG:
+                logger.debug(f"详细错误: {traceback.format_exc()}")
             return []
 
     async def ping(self) -> bool:

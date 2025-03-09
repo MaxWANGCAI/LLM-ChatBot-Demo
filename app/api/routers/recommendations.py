@@ -144,11 +144,17 @@ async def get_quick_answer(question_id: str = FastAPIPath(..., description="问�
     question = next((q for q in all_questions if q["id"] == question_id), None)
     
     if not question:
-        raise HTTPException(status_code=404, detail=f"问题ID '{question_id}' 不存在")
+        raise HTTPException(
+            status_code=404, 
+            detail={
+                "message": f"问题ID '{question_id}' 不存在",
+                "suggestion": "请使用 /api/recommended-questions 接口获取可用的问题列表"
+            }
+        )
     
     return QuickAnswer(
         id=question["id"],
         question=question["question"],
         answer=question.get("answer", "抱歉，该问题暂无预设回答。"),
         source_type="预设回答"
-    ) 
+    )

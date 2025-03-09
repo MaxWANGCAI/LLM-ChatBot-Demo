@@ -69,7 +69,7 @@ test_cases:
 
 # 报告生成配置
 report_config:
-  report_template: "templates/test_report.html"  # 报告模板路径
+  report_template: "app/templates/test_report.html"  # 报告模板路径
   report_dir: "test_reports"  # 报告保存目录
   keep_reports: 10  # 保留最近的报告数量
   image_format: "png"  # 图表格式

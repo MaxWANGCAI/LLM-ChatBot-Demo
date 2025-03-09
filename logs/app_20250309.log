@@ -1,0 +1,962 @@
+2025-03-09 07:04:34,147 - qa_app - INFO - 95094 - 4660803072 - 启动服务器...
+2025-03-09 07:04:34,147 - qa_app - INFO - 启动服务器...
+2025-03-09 07:04:34,203 - qa_app - INFO - 95094 - 4660803072 - 应用服务启动...
+2025-03-09 07:04:34,203 - qa_app - INFO - 应用服务启动...
+2025-03-09 07:04:34,203 - qa_app - INFO - 应用服务启动...
+2025-03-09 07:04:34,322 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.119s]
+2025-03-09 07:04:34,322 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.119s]
+2025-03-09 07:04:34,323 - qa_app - INFO - 95094 - 4660803072 - Elasticsearch 连接成功
+2025-03-09 07:04:34,323 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 07:04:34,323 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 07:04:34,323 - qa_app - INFO - 95094 - 4660803072 - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:04:34,323 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:04:34,323 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:04:34,323 - qa_app - INFO - 95094 - 4660803072 - 服务启动成功
+2025-03-09 07:04:34,323 - qa_app - INFO - 服务启动成功
+2025-03-09 07:04:34,323 - qa_app - INFO - 服务启动成功
+2025-03-09 07:06:26,732 - qa_app - INFO - 95094 - 4660803072 - 创建新会话: ccf3d646-b292-41d8-86b3-b7f765507e53, 知识库类型: all
+2025-03-09 07:06:26,732 - qa_app - INFO - 创建新会话: ccf3d646-b292-41d8-86b3-b7f765507e53, 知识库类型: all
+2025-03-09 07:06:26,732 - qa_app - INFO - 创建新会话: ccf3d646-b292-41d8-86b3-b7f765507e53, 知识库类型: all
+2025-03-09 07:06:27,077 - qa_app - INFO - 95094 - 4660803072 - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:06:27,077 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:06:27,077 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:06:27,077 - qa_app - INFO - 95094 - 4660803072 - 收到问题 - 会话: ccf3d646-b292-41d8-86b3-b7f765507e53, 问题: sdf
+2025-03-09 07:06:27,077 - qa_app - INFO - 收到问题 - 会话: ccf3d646-b292-41d8-86b3-b7f765507e53, 问题: sdf
+2025-03-09 07:06:27,077 - qa_app - INFO - 收到问题 - 会话: ccf3d646-b292-41d8-86b3-b7f765507e53, 问题: sdf
+2025-03-09 07:06:29,921 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:1.669s]
+2025-03-09 07:06:29,921 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:1.669s]
+2025-03-09 07:06:29,924 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:06:29,924 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:06:29,925 - qa_app - INFO - 95094 - 4660803072 - 文档检索完成 - 总耗时: 2.84秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:06:29,925 - qa_app - INFO - 文档检索完成 - 总耗时: 2.84秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:06:29,925 - qa_app - INFO - 文档检索完成 - 总耗时: 2.84秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:06:30,656 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:06:30.656600", "session_id": "ccf3d646-b292-41d8-86b3-b7f765507e53", "kb_type": "all", "question": "sdf", "answer": "I don't know the answer as the question provided does not contain any meaningful information or context. Could you please provide a specific question or more context?", "sources": [], "response_time": 3.926309823989868, "error": null, "metadata": {"token_count": 169, "source_count": 0}}
+2025-03-09 07:06:30,656 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:06:30.656600", "session_id": "ccf3d646-b292-41d8-86b3-b7f765507e53", "kb_type": "all", "question": "sdf", "answer": "I don't know the answer as the question provided does not contain any meaningful information or context. Could you please provide a specific question or more context?", "sources": [], "response_time": 3.926309823989868, "error": null, "metadata": {"token_count": 169, "source_count": 0}}
+2025-03-09 07:45:12,989 - qa_app - INFO - 97167 - 4414420480 - 启动服务器...
+2025-03-09 07:45:12,989 - qa_app - INFO - 启动服务器...
+2025-03-09 07:45:13,042 - qa_app - INFO - 97167 - 4414420480 - 应用服务启动...
+2025-03-09 07:45:13,042 - qa_app - INFO - 应用服务启动...
+2025-03-09 07:45:13,042 - qa_app - INFO - 应用服务启动...
+2025-03-09 07:45:13,053 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.010s]
+2025-03-09 07:45:13,053 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.010s]
+2025-03-09 07:45:13,054 - qa_app - INFO - 97167 - 4414420480 - Elasticsearch 连接成功
+2025-03-09 07:45:13,054 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 07:45:13,054 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 07:45:13,054 - qa_app - INFO - 97167 - 4414420480 - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:45:13,054 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:45:13,054 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:45:13,054 - qa_app - INFO - 97167 - 4414420480 - 服务启动成功
+2025-03-09 07:45:13,054 - qa_app - INFO - 服务启动成功
+2025-03-09 07:45:13,054 - qa_app - INFO - 服务启动成功
+2025-03-09 07:45:13,056 - qa_app - INFO - 97167 - 4414420480 - 应用服务关闭...
+2025-03-09 07:45:13,056 - qa_app - INFO - 应用服务关闭...
+2025-03-09 07:45:13,056 - qa_app - INFO - 应用服务关闭...
+2025-03-09 07:45:13,056 - qa_app - INFO - 97167 - 4414420480 - 服务已完全关闭
+2025-03-09 07:45:13,056 - qa_app - INFO - 服务已完全关闭
+2025-03-09 07:45:13,056 - qa_app - INFO - 服务已完全关闭
+2025-03-09 07:45:13,057 - __main__ - INFO - 服务已完全关闭
+2025-03-09 07:45:13,057 - __main__ - INFO - 服务已完全关闭
+2025-03-09 07:45:56,314 - qa_app - INFO - 97205 - 4403779072 - 启动服务器...
+2025-03-09 07:45:56,314 - qa_app - INFO - 启动服务器...
+2025-03-09 07:45:56,336 - qa_app - INFO - 97205 - 4403779072 - 应用服务启动...
+2025-03-09 07:45:56,336 - qa_app - INFO - 应用服务启动...
+2025-03-09 07:45:56,336 - qa_app - INFO - 应用服务启动...
+2025-03-09 07:45:56,353 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.016s]
+2025-03-09 07:45:56,353 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.016s]
+2025-03-09 07:45:56,353 - qa_app - INFO - 97205 - 4403779072 - Elasticsearch 连接成功
+2025-03-09 07:45:56,353 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 07:45:56,353 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 07:45:56,353 - qa_app - INFO - 97205 - 4403779072 - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:45:56,353 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:45:56,353 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 07:45:56,353 - qa_app - INFO - 97205 - 4403779072 - 服务启动成功
+2025-03-09 07:45:56,353 - qa_app - INFO - 服务启动成功
+2025-03-09 07:45:56,353 - qa_app - INFO - 服务启动成功
+2025-03-09 07:46:36,612 - qa_app - INFO - 97205 - 4403779072 - 创建新会话: 5529efb1-e7b7-44e4-8e05-1cbab9d10c41, 知识库类型: all
+2025-03-09 07:46:36,612 - qa_app - INFO - 创建新会话: 5529efb1-e7b7-44e4-8e05-1cbab9d10c41, 知识库类型: all
+2025-03-09 07:46:36,612 - qa_app - INFO - 创建新会话: 5529efb1-e7b7-44e4-8e05-1cbab9d10c41, 知识库类型: all
+2025-03-09 07:46:36,662 - qa_app - INFO - 97205 - 4403779072 - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:46:36,662 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:46:36,662 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:46:36,662 - qa_app - INFO - 97205 - 4403779072 - 收到问题 - 会话: 5529efb1-e7b7-44e4-8e05-1cbab9d10c41, 问题: 要怎么联系客服啊
+2025-03-09 07:46:36,662 - qa_app - INFO - 收到问题 - 会话: 5529efb1-e7b7-44e4-8e05-1cbab9d10c41, 问题: 要怎么联系客服啊
+2025-03-09 07:46:36,662 - qa_app - INFO - 收到问题 - 会话: 5529efb1-e7b7-44e4-8e05-1cbab9d10c41, 问题: 要怎么联系客服啊
+2025-03-09 07:46:37,550 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.113s]
+2025-03-09 07:46:37,550 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.113s]
+2025-03-09 07:46:37,550 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:46:37,550 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:46:37,550 - qa_app - INFO - 97205 - 4403779072 - 文档检索完成 - 总耗时: 0.89秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:46:37,550 - qa_app - INFO - 文档检索完成 - 总耗时: 0.89秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:46:37,550 - qa_app - INFO - 文档检索完成 - 总耗时: 0.89秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:46:39,337 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:46:39.337850", "session_id": "5529efb1-e7b7-44e4-8e05-1cbab9d10c41", "kb_type": "all", "question": "要怎么联系客服啊", "answer": "如果您需要联系我们的客服，通常您可以：\n\n1. 查看网站或应用程序中的“帮助”或“联系客服”部分。\n2. 寻找客服电话号码以便直接通话。\n3. 查找在线聊天选项以即时与客服代表交谈。\n4. 发送电子邮件至指定的客服邮箱地址。\n\n由于我目前无法访问具体的网站或应用程序信息，请您按照上述通用方法尝试寻找客服联系方式。如果还是找不到，请提供更多关于您所使用的服务的信息，我会尽力提供更具体的指导。", "sources": [], "response_time": 2.7258949279785156, "error": null, "metadata": {"token_count": 204, "source_count": 0}}
+2025-03-09 07:46:39,337 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:46:39.337850", "session_id": "5529efb1-e7b7-44e4-8e05-1cbab9d10c41", "kb_type": "all", "question": "要怎么联系客服啊", "answer": "如果您需要联系我们的客服，通常您可以：\n\n1. 查看网站或应用程序中的“帮助”或“联系客服”部分。\n2. 寻找客服电话号码以便直接通话。\n3. 查找在线聊天选项以即时与客服代表交谈。\n4. 发送电子邮件至指定的客服邮箱地址。\n\n由于我目前无法访问具体的网站或应用程序信息，请您按照上述通用方法尝试寻找客服联系方式。如果还是找不到，请提供更多关于您所使用的服务的信息，我会尽力提供更具体的指导。", "sources": [], "response_time": 2.7258949279785156, "error": null, "metadata": {"token_count": 204, "source_count": 0}}
+2025-03-09 07:47:32,700 - qa_app - INFO - 97205 - 4403779072 - 创建新会话: 9e3833f1-f08c-4dc4-aad7-6103012791a8, 知识库类型: all
+2025-03-09 07:47:32,700 - qa_app - INFO - 创建新会话: 9e3833f1-f08c-4dc4-aad7-6103012791a8, 知识库类型: all
+2025-03-09 07:47:32,700 - qa_app - INFO - 创建新会话: 9e3833f1-f08c-4dc4-aad7-6103012791a8, 知识库类型: all
+2025-03-09 07:47:32,701 - qa_app - INFO - 97205 - 4403779072 - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:47:32,701 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:47:32,701 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 07:47:32,701 - qa_app - INFO - 97205 - 4403779072 - 收到问题 - 会话: 9e3833f1-f08c-4dc4-aad7-6103012791a8, 问题: 我支付失败了怎么办？
+2025-03-09 07:47:32,701 - qa_app - INFO - 收到问题 - 会话: 9e3833f1-f08c-4dc4-aad7-6103012791a8, 问题: 我支付失败了怎么办？
+2025-03-09 07:47:32,701 - qa_app - INFO - 收到问题 - 会话: 9e3833f1-f08c-4dc4-aad7-6103012791a8, 问题: 我支付失败了怎么办？
+2025-03-09 07:47:33,003 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.064s]
+2025-03-09 07:47:33,003 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.064s]
+2025-03-09 07:47:33,004 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:47:33,004 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:47:33,004 - qa_app - INFO - 97205 - 4403779072 - 文档检索完成 - 总耗时: 0.30秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:47:33,004 - qa_app - INFO - 文档检索完成 - 总耗时: 0.30秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:47:33,004 - qa_app - INFO - 文档检索完成 - 总耗时: 0.30秒, 找到文档数: 0, 知识库类型: all
+2025-03-09 07:47:34,770 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:47:34.770234", "session_id": "9e3833f1-f08c-4dc4-aad7-6103012791a8", "kb_type": "all", "question": "我支付失败了怎么办？", "answer": "如果您付款失败了，您可以尝试以下方法解决：\n\n1. 检查您的付款信息是否正确，包括账户名、账号和银行相关信息。\n2. 确保您的银行账户中有足够的余额或信用额度。\n3. 尝试更换其他付款方式进行支付，如借记卡、信用卡或其他电子支付方式。\n4. 如果问题仍然存在，请联系您的银行或付款服务提供商以获取帮助。\n5. 如果是在某个网站或应用上进行的支付，也可以联系该网站或应用的客服寻求帮助。", "sources": [], "response_time": 2.069469928741455, "error": null, "metadata": {"token_count": 202, "source_count": 0}}
+2025-03-09 07:47:34,770 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:47:34.770234", "session_id": "9e3833f1-f08c-4dc4-aad7-6103012791a8", "kb_type": "all", "question": "我支付失败了怎么办？", "answer": "如果您付款失败了，您可以尝试以下方法解决：\n\n1. 检查您的付款信息是否正确，包括账户名、账号和银行相关信息。\n2. 确保您的银行账户中有足够的余额或信用额度。\n3. 尝试更换其他付款方式进行支付，如借记卡、信用卡或其他电子支付方式。\n4. 如果问题仍然存在，请联系您的银行或付款服务提供商以获取帮助。\n5. 如果是在某个网站或应用上进行的支付，也可以联系该网站或应用的客服寻求帮助。", "sources": [], "response_time": 2.069469928741455, "error": null, "metadata": {"token_count": 202, "source_count": 0}}
+2025-03-09 07:49:08,468 - qa_app - INFO - 97205 - 4403779072 - 创建新会话: 3c076780-f23b-45e3-82e6-e3875ffedc94, 知识库类型: business
+2025-03-09 07:49:08,468 - qa_app - INFO - 创建新会话: 3c076780-f23b-45e3-82e6-e3875ffedc94, 知识库类型: business
+2025-03-09 07:49:08,468 - qa_app - INFO - 创建新会话: 3c076780-f23b-45e3-82e6-e3875ffedc94, 知识库类型: business
+2025-03-09 07:49:08,469 - qa_app - INFO - 97205 - 4403779072 - 创建新的对话链实例，知识库类型: business
+2025-03-09 07:49:08,469 - qa_app - INFO - 创建新的对话链实例，知识库类型: business
+2025-03-09 07:49:08,469 - qa_app - INFO - 创建新的对话链实例，知识库类型: business
+2025-03-09 07:49:08,470 - qa_app - INFO - 97205 - 4403779072 - 收到问题 - 会话: 3c076780-f23b-45e3-82e6-e3875ffedc94, 问题: 怎么做渠道管理？
+2025-03-09 07:49:08,470 - qa_app - INFO - 收到问题 - 会话: 3c076780-f23b-45e3-82e6-e3875ffedc94, 问题: 怎么做渠道管理？
+2025-03-09 07:49:08,470 - qa_app - INFO - 收到问题 - 会话: 3c076780-f23b-45e3-82e6-e3875ffedc94, 问题: 怎么做渠道管理？
+2025-03-09 07:49:08,931 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.094s]
+2025-03-09 07:49:08,931 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.094s]
+2025-03-09 07:49:08,932 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:49:08,932 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 07:49:08,932 - qa_app - INFO - 97205 - 4403779072 - 文档检索完成 - 总耗时: 0.46秒, 找到文档数: 0, 知识库类型: business
+2025-03-09 07:49:08,932 - qa_app - INFO - 文档检索完成 - 总耗时: 0.46秒, 找到文档数: 0, 知识库类型: business
+2025-03-09 07:49:08,932 - qa_app - INFO - 文档检索完成 - 总耗时: 0.46秒, 找到文档数: 0, 知识库类型: business
+2025-03-09 07:49:12,182 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:49:12.182942", "session_id": "3c076780-f23b-45e3-82e6-e3875ffedc94", "kb_type": "business", "question": "怎么做渠道管理？", "answer": "渠道管理涉及多个步骤和策略，以下是一些基本的指导原则：\n\n1. **定义目标** - 首先需要明确渠道管理的目标是什么，比如提高市场覆盖率、增加销售额或提升客户满意度等。\n\n2. **识别渠道** - 了解并确定哪些渠道可以达到你的目标。这可能包括线上渠道（如社交媒体、电子邮件营销、在线广告）和线下渠道（如零售店、分销商）。\n\n3. **评估渠道性能** - 定期检查各个渠道的表现，看看它们是否帮助你达到了最初设定的目标。这可以通过分析销售数据、网站流量统计等方式完成。\n\n4. **优化渠道** - 根据评估结果对表现不佳的渠道进行调整或优化，同时加强表现好的渠道的投资。\n\n5. **建立合作伙伴关系** - 与渠道合作伙伴建立良好的合作关系对于成功实施渠道管理至关重要。这包括确保双方都有清晰的理解和期望值，并保持开放的沟通。\n\n6. **利用技术工具** - 使用CRM系统和其他软件来帮助跟踪和管理销售渠道，这些工具可以帮助你更好地理解客户需求，从而做出更有效的决策。\n\n7. **持续监控和调整** - 市场环境和消费者行为会不断变化，因此需要定期回顾和调整你的渠道策略以适应新的情况。\n\n通过遵循以上步骤，你可以有效地管理你的销售渠道，从而推动业务增长。", "sources": [], "response_time": 3.7145440578460693, "error": null, "metadata": {"token_count": 544, "source_count": 0}}
+2025-03-09 07:49:12,182 - qa_metrics - INFO - {"timestamp": "2025-03-09T07:49:12.182942", "session_id": "3c076780-f23b-45e3-82e6-e3875ffedc94", "kb_type": "business", "question": "怎么做渠道管理？", "answer": "渠道管理涉及多个步骤和策略，以下是一些基本的指导原则：\n\n1. **定义目标** - 首先需要明确渠道管理的目标是什么，比如提高市场覆盖率、增加销售额或提升客户满意度等。\n\n2. **识别渠道** - 了解并确定哪些渠道可以达到你的目标。这可能包括线上渠道（如社交媒体、电子邮件营销、在线广告）和线下渠道（如零售店、分销商）。\n\n3. **评估渠道性能** - 定期检查各个渠道的表现，看看它们是否帮助你达到了最初设定的目标。这可以通过分析销售数据、网站流量统计等方式完成。\n\n4. **优化渠道** - 根据评估结果对表现不佳的渠道进行调整或优化，同时加强表现好的渠道的投资。\n\n5. **建立合作伙伴关系** - 与渠道合作伙伴建立良好的合作关系对于成功实施渠道管理至关重要。这包括确保双方都有清晰的理解和期望值，并保持开放的沟通。\n\n6. **利用技术工具** - 使用CRM系统和其他软件来帮助跟踪和管理销售渠道，这些工具可以帮助你更好地理解客户需求，从而做出更有效的决策。\n\n7. **持续监控和调整** - 市场环境和消费者行为会不断变化，因此需要定期回顾和调整你的渠道策略以适应新的情况。\n\n通过遵循以上步骤，你可以有效地管理你的销售渠道，从而推动业务增长。", "sources": [], "response_time": 3.7145440578460693, "error": null, "metadata": {"token_count": 544, "source_count": 0}}
+2025-03-09 08:12:54,754 - qa_app - INFO - 98518 - 4648887808 - 启动服务器...
+2025-03-09 08:12:54,754 - qa_app - INFO - 启动服务器...
+2025-03-09 08:12:54,807 - qa_app - INFO - 98518 - 4648887808 - 应用服务启动...
+2025-03-09 08:12:54,807 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:12:54,807 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:12:55,003 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.195s]
+2025-03-09 08:12:55,003 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.195s]
+2025-03-09 08:12:55,003 - qa_app - INFO - 98518 - 4648887808 - Elasticsearch 连接成功
+2025-03-09 08:12:55,003 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:12:55,003 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:12:55,003 - qa_app - INFO - 98518 - 4648887808 - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:12:55,003 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:12:55,003 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:12:55,004 - qa_app - INFO - 98518 - 4648887808 - 服务启动成功
+2025-03-09 08:12:55,004 - qa_app - INFO - 服务启动成功
+2025-03-09 08:12:55,004 - qa_app - INFO - 服务启动成功
+2025-03-09 08:13:35,039 - qa_app - INFO - 98518 - 4648887808 - 创建新会话: ee904059-89f9-4198-b03a-387fa0748b15, 知识库类型: business
+2025-03-09 08:13:35,039 - qa_app - INFO - 创建新会话: ee904059-89f9-4198-b03a-387fa0748b15, 知识库类型: business
+2025-03-09 08:13:35,039 - qa_app - INFO - 创建新会话: ee904059-89f9-4198-b03a-387fa0748b15, 知识库类型: business
+2025-03-09 08:13:35,107 - qa_app - INFO - 98518 - 4648887808 - 创建新的对话链实例，知识库类型: business
+2025-03-09 08:13:35,107 - qa_app - INFO - 创建新的对话链实例，知识库类型: business
+2025-03-09 08:13:35,107 - qa_app - INFO - 创建新的对话链实例，知识库类型: business
+2025-03-09 08:13:35,107 - qa_app - INFO - 98518 - 4648887808 - 收到问题 - 会话: ee904059-89f9-4198-b03a-387fa0748b15, 问题: 怎么管理渠道？
+2025-03-09 08:13:35,107 - qa_app - INFO - 收到问题 - 会话: ee904059-89f9-4198-b03a-387fa0748b15, 问题: 怎么管理渠道？
+2025-03-09 08:13:35,107 - qa_app - INFO - 收到问题 - 会话: ee904059-89f9-4198-b03a-387fa0748b15, 问题: 怎么管理渠道？
+2025-03-09 08:13:35,553 - qa_app - INFO - 98518 - 4648887808 - {'message': '生成向量嵌入', 'query': '怎么管理渠道？', 'vector_dimension': 2, 'embedding_time': 0.44490718841552734}
+2025-03-09 08:13:35,553 - qa_app - INFO - {'message': '生成向量嵌入', 'query': '怎么管理渠道？', 'vector_dimension': 2, 'embedding_time': 0.44490718841552734}
+2025-03-09 08:13:35,553 - qa_app - INFO - {'message': '生成向量嵌入', 'query': '怎么管理渠道？', 'vector_dimension': 2, 'embedding_time': 0.44490718841552734}
+2025-03-09 08:13:35,899 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.122s]
+2025-03-09 08:13:35,899 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:400 duration:0.122s]
+2025-03-09 08:13:35,899 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 08:13:35,899 - app.utils.es_client - ERROR - 搜索失败: BadRequestError(400, 'x_content_parse_exception', '[term] query does not support [embedding]')
+2025-03-09 08:13:35,900 - qa_app - INFO - 98518 - 4648887808 - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'business', 'top_k': 3, 'search_time': 0.34608006477355957, 'total_hits': 0, 'results': []}
+2025-03-09 08:13:35,900 - qa_app - INFO - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'business', 'top_k': 3, 'search_time': 0.34608006477355957, 'total_hits': 0, 'results': []}
+2025-03-09 08:13:35,900 - qa_app - INFO - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'business', 'top_k': 3, 'search_time': 0.34608006477355957, 'total_hits': 0, 'results': []}
+2025-03-09 08:13:35,900 - qa_app - INFO - 98518 - 4648887808 - 文档检索完成 - 总耗时: 0.79秒, 找到文档数: 0, 知识库类型: business
+2025-03-09 08:13:35,900 - qa_app - INFO - 文档检索完成 - 总耗时: 0.79秒, 找到文档数: 0, 知识库类型: business
+2025-03-09 08:13:35,900 - qa_app - INFO - 文档检索完成 - 总耗时: 0.79秒, 找到文档数: 0, 知识库类型: business
+2025-03-09 08:13:38,533 - qa_metrics - INFO - {"timestamp": "2025-03-09T08:13:38.533723", "session_id": "ee904059-89f9-4198-b03a-387fa0748b15", "kb_type": "business", "question": "怎么管理渠道？", "answer": "要管理渠道，您可以采取以下几个步骤：\n\n1. 了解您的渠道：首先，您需要明确自己的渠道是什么，这可能包括销售、营销、分销等。了解渠道的工作方式和流程。\n\n2. 设定目标：为每个渠道设定清晰的目标，例如增加销售额、提高品牌知名度或改善客户满意度。\n\n3. 监控性能：定期检查渠道的表现，以确保它们符合预期目标。使用关键绩效指标（KPI）来衡量渠道的成功。\n\n4. 优化渠道：根据监控到的数据调整渠道策略。这可能包括改进广告、改变定价策略或寻找新的分销合作伙伴。\n\n5. 建立关系：与渠道合作伙伴建立良好的关系，以促进合作并提高效率。保持沟通畅通，并确保双方都对目标有共同的理解。\n\n6. 不断学习：市场和技术不断变化，因此需要持续关注行业动态并适应这些变化，以便更好地管理渠道。", "sources": [], "response_time": 3.493809938430786, "error": null, "metadata": {"token_count": 345, "source_count": 0}}
+2025-03-09 08:13:38,533 - qa_metrics - INFO - {"timestamp": "2025-03-09T08:13:38.533723", "session_id": "ee904059-89f9-4198-b03a-387fa0748b15", "kb_type": "business", "question": "怎么管理渠道？", "answer": "要管理渠道，您可以采取以下几个步骤：\n\n1. 了解您的渠道：首先，您需要明确自己的渠道是什么，这可能包括销售、营销、分销等。了解渠道的工作方式和流程。\n\n2. 设定目标：为每个渠道设定清晰的目标，例如增加销售额、提高品牌知名度或改善客户满意度。\n\n3. 监控性能：定期检查渠道的表现，以确保它们符合预期目标。使用关键绩效指标（KPI）来衡量渠道的成功。\n\n4. 优化渠道：根据监控到的数据调整渠道策略。这可能包括改进广告、改变定价策略或寻找新的分销合作伙伴。\n\n5. 建立关系：与渠道合作伙伴建立良好的关系，以促进合作并提高效率。保持沟通畅通，并确保双方都对目标有共同的理解。\n\n6. 不断学习：市场和技术不断变化，因此需要持续关注行业动态并适应这些变化，以便更好地管理渠道。", "sources": [], "response_time": 3.493809938430786, "error": null, "metadata": {"token_count": 345, "source_count": 0}}
+2025-03-09 08:32:57,825 - qa_app - INFO - 99557 - 4609267200 - 启动服务器...
+2025-03-09 08:32:57,825 - qa_app - INFO - 启动服务器...
+2025-03-09 08:32:57,898 - qa_app - INFO - 99557 - 4609267200 - 应用服务启动...
+2025-03-09 08:32:57,898 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:32:57,898 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:32:58,058 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.159s]
+2025-03-09 08:32:58,058 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.159s]
+2025-03-09 08:32:58,058 - qa_app - INFO - 99557 - 4609267200 - Elasticsearch 连接成功
+2025-03-09 08:32:58,058 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:32:58,058 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:32:58,059 - qa_app - INFO - 99557 - 4609267200 - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:32:58,059 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:32:58,059 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:32:58,059 - qa_app - INFO - 99557 - 4609267200 - 服务启动成功
+2025-03-09 08:32:58,059 - qa_app - INFO - 服务启动成功
+2025-03-09 08:32:58,059 - qa_app - INFO - 服务启动成功
+2025-03-09 08:39:55,013 - qa_app - INFO - 149 - 4691985920 - 启动服务器...
+2025-03-09 08:39:55,013 - qa_app - INFO - 启动服务器...
+2025-03-09 08:39:55,106 - qa_app - INFO - 149 - 4691985920 - 应用服务启动...
+2025-03-09 08:39:55,106 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:39:55,106 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:39:55,221 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.114s]
+2025-03-09 08:39:55,221 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.114s]
+2025-03-09 08:39:55,221 - qa_app - INFO - 149 - 4691985920 - Elasticsearch 连接成功
+2025-03-09 08:39:55,221 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:39:55,221 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:39:55,222 - qa_app - INFO - 149 - 4691985920 - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:39:55,222 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:39:55,222 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:39:55,222 - qa_app - INFO - 149 - 4691985920 - 服务启动成功
+2025-03-09 08:39:55,222 - qa_app - INFO - 服务启动成功
+2025-03-09 08:39:55,222 - qa_app - INFO - 服务启动成功
+2025-03-09 08:42:15,757 - qa_app - INFO - 393 - 4583073280 - 启动服务器...
+2025-03-09 08:42:15,757 - qa_app - INFO - 启动服务器...
+2025-03-09 08:42:15,856 - qa_app - INFO - 393 - 4583073280 - 应用服务启动...
+2025-03-09 08:42:15,856 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:42:15,856 - qa_app - INFO - 应用服务启动...
+2025-03-09 08:42:15,895 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.038s]
+2025-03-09 08:42:15,895 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.038s]
+2025-03-09 08:42:15,896 - qa_app - INFO - 393 - 4583073280 - Elasticsearch 连接成功
+2025-03-09 08:42:15,896 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:42:15,896 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 08:42:15,896 - qa_app - INFO - 393 - 4583073280 - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:42:15,896 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:42:15,896 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 08:42:15,896 - qa_app - INFO - 393 - 4583073280 - 服务启动成功
+2025-03-09 08:42:15,896 - qa_app - INFO - 服务启动成功
+2025-03-09 08:42:15,896 - qa_app - INFO - 服务启动成功
+2025-03-09 08:43:25,925 - qa_app - INFO - 393 - 4583073280 - 创建新会话: 2b0c8642-fba5-4f7c-afbf-ee41c0764489, 知识库类型: all
+2025-03-09 08:43:25,925 - qa_app - INFO - 创建新会话: 2b0c8642-fba5-4f7c-afbf-ee41c0764489, 知识库类型: all
+2025-03-09 08:43:25,925 - qa_app - INFO - 创建新会话: 2b0c8642-fba5-4f7c-afbf-ee41c0764489, 知识库类型: all
+2025-03-09 08:43:26,093 - qa_app - INFO - 393 - 4583073280 - 创建新的对话链实例，知识库类型: all
+2025-03-09 08:43:26,093 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 08:43:26,093 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 08:43:26,093 - qa_app - INFO - 393 - 4583073280 - 收到问题 - 会话: 2b0c8642-fba5-4f7c-afbf-ee41c0764489, 问题: 怎么管理渠道？
+2025-03-09 08:43:26,093 - qa_app - INFO - 收到问题 - 会话: 2b0c8642-fba5-4f7c-afbf-ee41c0764489, 问题: 怎么管理渠道？
+2025-03-09 08:43:26,093 - qa_app - INFO - 收到问题 - 会话: 2b0c8642-fba5-4f7c-afbf-ee41c0764489, 问题: 怎么管理渠道？
+2025-03-09 08:43:26,515 - qa_app - INFO - 393 - 4583073280 - {'message': '生成向量嵌入', 'query': '怎么管理渠道？', 'vector_dimension': 2, 'embedding_time': 0.41733503341674805}
+2025-03-09 08:43:26,515 - qa_app - INFO - {'message': '生成向量嵌入', 'query': '怎么管理渠道？', 'vector_dimension': 2, 'embedding_time': 0.41733503341674805}
+2025-03-09 08:43:26,515 - qa_app - INFO - {'message': '生成向量嵌入', 'query': '怎么管理渠道？', 'vector_dimension': 2, 'embedding_time': 0.41733503341674805}
+2025-03-09 08:43:26,628 - qa_app - ERROR - 393 - 4583073280 - {"error_message": "检索文档时出错: name 'traceback' is not defined", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T08:43:26.516539", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 41, in search_similar\n    logger.debug(f\"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}\")\nNameError: name 'json' is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 51, in aget_relevant_documents\n    results = es_client.search_similar(\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 57, in search_similar\n    logger.error(f\"搜索失败: {str(e)}\\n详细错误: {traceback.format_exc()}\")\nNameError: name 'traceback' is not defined\n", "stack_info": ["  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py\", line 197, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n", "  File \"/Users/max.xu/LLM/app/main.py\", line 170, in <module>\n    main()\n", "  File \"/Users/max.xu/LLM/app/main.py\", line 157, in main\n    loop.run_until_complete(server.run())\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/server.py\", line 66, in run\n    return asyncio.run(self.serve(sockets=sockets))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/runners.py\", line 44, in run\n    return loop.run_until_complete(main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py\", line 403, in run_asgi\n    result = await app(  # type: ignore[func-returns-value]\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py\", line 60, in __call__\n    return await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/applications.py\", line 1054, in __call__\n    await super().__call__(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/applications.py\", line 112, in __call__\n    await self.middleware_stack(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/errors.py\", line 165, in __call__\n    await self.app(scope, receive, _send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py\", line 93, in __call__\n    await self.simple_response(scope, receive, send, request_headers=headers)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py\", line 144, in simple_response\n    await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/exceptions.py\", line 62, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 714, in __call__\n    await self.middleware_stack(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 734, in app\n    await route.handle(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 288, in handle\n    await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 76, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 73, in app\n    response = await f(request)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py\", line 301, in app\n    raw_response = await run_endpoint_function(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py\", line 212, in run_endpoint_function\n    return await dependant.call(**values)\n", "  File \"/Users/max.xu/LLM/app/api/routers/chat.py\", line 43, in chat\n    response = await chain.get_response(request.question)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 206, in get_response\n    response = await self.chain.ainvoke({\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py\", line 212, in ainvoke\n    await self._acall(inputs, run_manager=run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 211, in _acall\n    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 409, in _aget_docs\n    docs = await self.retriever.ainvoke(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py\", line 326, in ainvoke\n    result = await self._aget_relevant_documents(input, **_kwargs)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 96, in aget_relevant_documents\n    qa_logger.log_error(f\"检索文档时出错: {str(e)}\")\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 41, in search_similar
+    logger.debug(f"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}")
+NameError: name 'json' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 51, in aget_relevant_documents
+    results = es_client.search_similar(
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 57, in search_similar
+    logger.error(f"搜索失败: {str(e)}\n详细错误: {traceback.format_exc()}")
+NameError: name 'traceback' is not defined
+Stack (most recent call last):
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/max.xu/LLM/app/main.py", line 170, in <module>
+    main()
+  File "/Users/max.xu/LLM/app/main.py", line 157, in main
+    loop.run_until_complete(server.run())
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/max.xu/LLM/app/api/routers/chat.py", line 43, in chat
+    response = await chain.get_response(request.question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 206, in get_response
+    response = await self.chain.ainvoke({
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py", line 212, in ainvoke
+    await self._acall(inputs, run_manager=run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 211, in _acall
+    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 409, in _aget_docs
+    docs = await self.retriever.ainvoke(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py", line 326, in ainvoke
+    result = await self._aget_relevant_documents(input, **_kwargs)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 96, in aget_relevant_documents
+    qa_logger.log_error(f"检索文档时出错: {str(e)}")
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 08:43:26,628 - qa_app - ERROR - {"error_message": "检索文档时出错: name 'traceback' is not defined", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T08:43:26.516539", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 41, in search_similar\n    logger.debug(f\"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}\")\nNameError: name 'json' is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 51, in aget_relevant_documents\n    results = es_client.search_similar(\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 57, in search_similar\n    logger.error(f\"搜索失败: {str(e)}\\n详细错误: {traceback.format_exc()}\")\nNameError: name 'traceback' is not defined\n", "stack_info": ["  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py\", line 197, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n", "  File \"/Users/max.xu/LLM/app/main.py\", line 170, in <module>\n    main()\n", "  File \"/Users/max.xu/LLM/app/main.py\", line 157, in main\n    loop.run_until_complete(server.run())\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/server.py\", line 66, in run\n    return asyncio.run(self.serve(sockets=sockets))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/runners.py\", line 44, in run\n    return loop.run_until_complete(main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py\", line 403, in run_asgi\n    result = await app(  # type: ignore[func-returns-value]\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py\", line 60, in __call__\n    return await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/applications.py\", line 1054, in __call__\n    await super().__call__(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/applications.py\", line 112, in __call__\n    await self.middleware_stack(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/errors.py\", line 165, in __call__\n    await self.app(scope, receive, _send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py\", line 93, in __call__\n    await self.simple_response(scope, receive, send, request_headers=headers)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py\", line 144, in simple_response\n    await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/exceptions.py\", line 62, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 714, in __call__\n    await self.middleware_stack(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 734, in app\n    await route.handle(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 288, in handle\n    await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 76, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 73, in app\n    response = await f(request)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py\", line 301, in app\n    raw_response = await run_endpoint_function(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py\", line 212, in run_endpoint_function\n    return await dependant.call(**values)\n", "  File \"/Users/max.xu/LLM/app/api/routers/chat.py\", line 43, in chat\n    response = await chain.get_response(request.question)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 206, in get_response\n    response = await self.chain.ainvoke({\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py\", line 212, in ainvoke\n    await self._acall(inputs, run_manager=run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 211, in _acall\n    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 409, in _aget_docs\n    docs = await self.retriever.ainvoke(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py\", line 326, in ainvoke\n    result = await self._aget_relevant_documents(input, **_kwargs)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 96, in aget_relevant_documents\n    qa_logger.log_error(f\"检索文档时出错: {str(e)}\")\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 41, in search_similar
+    logger.debug(f"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}")
+NameError: name 'json' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 51, in aget_relevant_documents
+    results = es_client.search_similar(
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 57, in search_similar
+    logger.error(f"搜索失败: {str(e)}\n详细错误: {traceback.format_exc()}")
+NameError: name 'traceback' is not defined
+Stack (most recent call last):
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/max.xu/LLM/app/main.py", line 170, in <module>
+    main()
+  File "/Users/max.xu/LLM/app/main.py", line 157, in main
+    loop.run_until_complete(server.run())
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/max.xu/LLM/app/api/routers/chat.py", line 43, in chat
+    response = await chain.get_response(request.question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 206, in get_response
+    response = await self.chain.ainvoke({
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py", line 212, in ainvoke
+    await self._acall(inputs, run_manager=run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 211, in _acall
+    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 409, in _aget_docs
+    docs = await self.retriever.ainvoke(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py", line 326, in ainvoke
+    result = await self._aget_relevant_documents(input, **_kwargs)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 96, in aget_relevant_documents
+    qa_logger.log_error(f"检索文档时出错: {str(e)}")
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 08:43:26,628 - qa_app - ERROR - {"error_message": "检索文档时出错: name 'traceback' is not defined", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T08:43:26.516539", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 41, in search_similar\n    logger.debug(f\"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}\")\nNameError: name 'json' is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 51, in aget_relevant_documents\n    results = es_client.search_similar(\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 57, in search_similar\n    logger.error(f\"搜索失败: {str(e)}\\n详细错误: {traceback.format_exc()}\")\nNameError: name 'traceback' is not defined\n", "stack_info": ["  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py\", line 197, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n", "  File \"/Users/max.xu/LLM/app/main.py\", line 170, in <module>\n    main()\n", "  File \"/Users/max.xu/LLM/app/main.py\", line 157, in main\n    loop.run_until_complete(server.run())\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/server.py\", line 66, in run\n    return asyncio.run(self.serve(sockets=sockets))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/runners.py\", line 44, in run\n    return loop.run_until_complete(main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py\", line 403, in run_asgi\n    result = await app(  # type: ignore[func-returns-value]\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py\", line 60, in __call__\n    return await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/applications.py\", line 1054, in __call__\n    await super().__call__(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/applications.py\", line 112, in __call__\n    await self.middleware_stack(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/errors.py\", line 165, in __call__\n    await self.app(scope, receive, _send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py\", line 93, in __call__\n    await self.simple_response(scope, receive, send, request_headers=headers)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py\", line 144, in simple_response\n    await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/exceptions.py\", line 62, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 714, in __call__\n    await self.middleware_stack(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 734, in app\n    await route.handle(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 288, in handle\n    await self.app(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 76, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py\", line 73, in app\n    response = await f(request)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py\", line 301, in app\n    raw_response = await run_endpoint_function(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py\", line 212, in run_endpoint_function\n    return await dependant.call(**values)\n", "  File \"/Users/max.xu/LLM/app/api/routers/chat.py\", line 43, in chat\n    response = await chain.get_response(request.question)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 206, in get_response\n    response = await self.chain.ainvoke({\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py\", line 212, in ainvoke\n    await self._acall(inputs, run_manager=run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 211, in _acall\n    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 409, in _aget_docs\n    docs = await self.retriever.ainvoke(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py\", line 326, in ainvoke\n    result = await self._aget_relevant_documents(input, **_kwargs)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 96, in aget_relevant_documents\n    qa_logger.log_error(f\"检索文档时出错: {str(e)}\")\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 41, in search_similar
+    logger.debug(f"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}")
+NameError: name 'json' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 51, in aget_relevant_documents
+    results = es_client.search_similar(
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 57, in search_similar
+    logger.error(f"搜索失败: {str(e)}\n详细错误: {traceback.format_exc()}")
+NameError: name 'traceback' is not defined
+Stack (most recent call last):
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/max.xu/LLM/app/main.py", line 170, in <module>
+    main()
+  File "/Users/max.xu/LLM/app/main.py", line 157, in main
+    loop.run_until_complete(server.run())
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/max.xu/LLM/app/api/routers/chat.py", line 43, in chat
+    response = await chain.get_response(request.question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 206, in get_response
+    response = await self.chain.ainvoke({
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py", line 212, in ainvoke
+    await self._acall(inputs, run_manager=run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 211, in _acall
+    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 409, in _aget_docs
+    docs = await self.retriever.ainvoke(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py", line 326, in ainvoke
+    result = await self._aget_relevant_documents(input, **_kwargs)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 96, in aget_relevant_documents
+    qa_logger.log_error(f"检索文档时出错: {str(e)}")
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 08:43:29,168 - qa_metrics - INFO - {"timestamp": "2025-03-09T08:43:29.168133", "session_id": "2b0c8642-fba5-4f7c-afbf-ee41c0764489", "kb_type": "all", "question": "怎么管理渠道？", "answer": "管理渠道的方法可能包括：\n\n1. 确定目标和策略：明确渠道的目标，制定相应的渠道策略。\n2. 选择合适的合作伙伴：根据业务需求挑选合适的渠道合作伙伴。\n3. 建立有效的沟通机制：保持与渠道伙伴之间的有效沟通，确保信息的及时传递。\n4. 提供培训和支持：为渠道伙伴提供必要的产品知识和技术支持。\n5. 激励措施：设计激励计划以鼓励渠道伙伴的努力。\n6. 监控绩效：定期评估渠道伙伴的表现，并根据需要进行调整。\n7. 维护关系：建立长期的合作关系，增强渠道伙伴的忠诚度。\n\n请注意，具体的管理方法可能会根据您的业务类型和具体情况进行调整。", "sources": [], "response_time": 3.244790554046631, "error": null, "metadata": {"token_count": 274, "source_count": 0}}
+2025-03-09 08:43:29,168 - qa_metrics - INFO - {"timestamp": "2025-03-09T08:43:29.168133", "session_id": "2b0c8642-fba5-4f7c-afbf-ee41c0764489", "kb_type": "all", "question": "怎么管理渠道？", "answer": "管理渠道的方法可能包括：\n\n1. 确定目标和策略：明确渠道的目标，制定相应的渠道策略。\n2. 选择合适的合作伙伴：根据业务需求挑选合适的渠道合作伙伴。\n3. 建立有效的沟通机制：保持与渠道伙伴之间的有效沟通，确保信息的及时传递。\n4. 提供培训和支持：为渠道伙伴提供必要的产品知识和技术支持。\n5. 激励措施：设计激励计划以鼓励渠道伙伴的努力。\n6. 监控绩效：定期评估渠道伙伴的表现，并根据需要进行调整。\n7. 维护关系：建立长期的合作关系，增强渠道伙伴的忠诚度。\n\n请注意，具体的管理方法可能会根据您的业务类型和具体情况进行调整。", "sources": [], "response_time": 3.244790554046631, "error": null, "metadata": {"token_count": 274, "source_count": 0}}
+2025-03-09 09:02:53,522 - qa_app - INFO - 1950 - 4400485888 - 创建新的对话链实例，知识库类型: business
+2025-03-09 09:02:53,523 - qa_app - INFO - 1950 - 4400485888 - 初始化对话链完成
+2025-03-09 09:03:22,860 - qa_app - INFO - 1950 - 4400485888 - 开始处理问题: 怎么管理渠道?
+2025-03-09 09:04:04,743 - qa_app - INFO - 1950 - 4400485888 - {'message': '生成向量嵌入', 'query': '怎么管理渠道?', 'vector_dimension': 2, 'embedding_time': 0.4409358501434326}
+2025-03-09 09:04:04,885 - qa_app - ERROR - 1950 - 4400485888 - {"error_message": "检索文档时出错: name 'traceback' is not defined", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T09:04:04.761771", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 41, in search_similar\n    logger.debug(f\"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}\")\nNameError: name 'json' is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 51, in aget_relevant_documents\n    results = es_client.search_similar(\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 57, in search_similar\n    logger.error(f\"搜索失败: {str(e)}\\n详细错误: {traceback.format_exc()}\")\nNameError: name 'traceback' is not defined\n", "stack_info": ["  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2195, in <module>\n    main()\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2177, in main\n    globals = debugger.run(setup['file'], None, None, is_module)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1489, in run\n    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1496, in _exec\n    pydev_imports.execfile(file, globals, locals)  # execute the script\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py\", line 18, in execfile\n    exec(compile(contents+\"\\n\", file, 'exec'), glob, loc)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py\", line 51, in <module>\n    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py\", line 175, in main\n    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 330, in pytest_cmdline_main\n    return wrap_session(config, _main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 283, in wrap_session\n    session.exitstatus = doit(config, session) or 0\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 337, in _main\n    config.hook.pytest_runtestloop(session=session)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 362, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 113, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 132, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 241, in call_and_report\n    call = CallInfo.from_call(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 341, in from_call\n    result: TResult | None = func()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 242, in <lambda>\n    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 174, in pytest_runtest_call\n    item.runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 533, in runtest\n    super().runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 1627, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 159, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 1052, in inner\n    _loop.run_until_complete(task)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/LLM/debug.py\", line 25, in test_conversation_chain\n    response = await chain.get_response(question)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 206, in get_response\n    response = await self.chain.ainvoke({\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py\", line 212, in ainvoke\n    await self._acall(inputs, run_manager=run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 211, in _acall\n    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 409, in _aget_docs\n    docs = await self.retriever.ainvoke(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py\", line 326, in ainvoke\n    result = await self._aget_relevant_documents(input, **_kwargs)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 96, in aget_relevant_documents\n    qa_logger.log_error(f\"检索文档时出错: {str(e)}\")\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 41, in search_similar
+    logger.debug(f"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}")
+NameError: name 'json' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 51, in aget_relevant_documents
+    results = es_client.search_similar(
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 57, in search_similar
+    logger.error(f"搜索失败: {str(e)}\n详细错误: {traceback.format_exc()}")
+NameError: name 'traceback' is not defined
+Stack (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py", line 51, in <module>
+    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 533, in runtest
+    super().runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 1052, in inner
+    _loop.run_until_complete(task)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/LLM/debug.py", line 25, in test_conversation_chain
+    response = await chain.get_response(question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 206, in get_response
+    response = await self.chain.ainvoke({
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py", line 212, in ainvoke
+    await self._acall(inputs, run_manager=run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 211, in _acall
+    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 409, in _aget_docs
+    docs = await self.retriever.ainvoke(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py", line 326, in ainvoke
+    result = await self._aget_relevant_documents(input, **_kwargs)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 96, in aget_relevant_documents
+    qa_logger.log_error(f"检索文档时出错: {str(e)}")
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 09:04:45,783 - qa_app - INFO - 2043 - 4488787456 - 创建新的对话链实例，知识库类型: business
+2025-03-09 09:04:45,784 - qa_app - INFO - 2043 - 4488787456 - 初始化对话链完成
+2025-03-09 09:04:52,095 - qa_app - INFO - 2043 - 4488787456 - 开始处理问题: 怎么管理渠道?
+2025-03-09 09:13:09,531 - qa_app - INFO - 2043 - 4488787456 - {'message': '生成向量嵌入', 'query': '怎么管理渠道?', 'vector_dimension': 2, 'embedding_time': 0.43839573860168457}
+2025-03-09 09:13:09,653 - qa_app - ERROR - 2043 - 4488787456 - {"error_message": "检索文档时出错: name 'traceback' is not defined", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T09:13:09.537412", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 41, in search_similar\n    logger.debug(f\"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}\")\nNameError: name 'json' is not defined\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 51, in aget_relevant_documents\n    results = es_client.search_similar(\n  File \"/Users/max.xu/LLM/app/utils/es_client.py\", line 57, in search_similar\n    logger.error(f\"搜索失败: {str(e)}\\n详细错误: {traceback.format_exc()}\")\nNameError: name 'traceback' is not defined\n", "stack_info": ["  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2195, in <module>\n    main()\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2177, in main\n    globals = debugger.run(setup['file'], None, None, is_module)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1489, in run\n    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1496, in _exec\n    pydev_imports.execfile(file, globals, locals)  # execute the script\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py\", line 18, in execfile\n    exec(compile(contents+\"\\n\", file, 'exec'), glob, loc)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py\", line 51, in <module>\n    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py\", line 175, in main\n    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 330, in pytest_cmdline_main\n    return wrap_session(config, _main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 283, in wrap_session\n    session.exitstatus = doit(config, session) or 0\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 337, in _main\n    config.hook.pytest_runtestloop(session=session)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 362, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 113, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 132, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 241, in call_and_report\n    call = CallInfo.from_call(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 341, in from_call\n    result: TResult | None = func()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 242, in <lambda>\n    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 174, in pytest_runtest_call\n    item.runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 533, in runtest\n    super().runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 1627, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 159, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 1052, in inner\n    _loop.run_until_complete(task)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/LLM/debug.py\", line 25, in test_conversation_chain\n    response = await chain.get_response(question)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 206, in get_response\n    response = await self.chain.ainvoke({\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py\", line 212, in ainvoke\n    await self._acall(inputs, run_manager=run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 211, in _acall\n    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py\", line 409, in _aget_docs\n    docs = await self.retriever.ainvoke(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py\", line 326, in ainvoke\n    result = await self._aget_relevant_documents(input, **_kwargs)\n", "  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 96, in aget_relevant_documents\n    qa_logger.log_error(f\"检索文档时出错: {str(e)}\")\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 41, in search_similar
+    logger.debug(f"执行向量搜索，参数：index={self.index_name}, size={top_k}, query={json.dumps(query, ensure_ascii=False)}")
+NameError: name 'json' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 51, in aget_relevant_documents
+    results = es_client.search_similar(
+  File "/Users/max.xu/LLM/app/utils/es_client.py", line 57, in search_similar
+    logger.error(f"搜索失败: {str(e)}\n详细错误: {traceback.format_exc()}")
+NameError: name 'traceback' is not defined
+Stack (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py", line 51, in <module>
+    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 533, in runtest
+    super().runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 1052, in inner
+    _loop.run_until_complete(task)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/LLM/debug.py", line 25, in test_conversation_chain
+    response = await chain.get_response(question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 206, in get_response
+    response = await self.chain.ainvoke({
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/base.py", line 212, in ainvoke
+    await self._acall(inputs, run_manager=run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 211, in _acall
+    docs = await self._aget_docs(new_question, inputs, run_manager=_run_manager)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain/chains/conversational_retrieval/base.py", line 409, in _aget_docs
+    docs = await self.retriever.ainvoke(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/langchain_core/retrievers.py", line 326, in ainvoke
+    result = await self._aget_relevant_documents(input, **_kwargs)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 96, in aget_relevant_documents
+    qa_logger.log_error(f"检索文档时出错: {str(e)}")
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 09:13:09,661 - qa_app - ERROR - 2043 - 4488787456 - {"error_message": "测试过程中出错: 'type' object is not iterable", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T09:13:09.658868", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 206, in get_response\n    response = await self.chain.ainvoke({\nTypeError: 'coroutine' object is not callable\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/debug.py\", line 25, in test_conversation_chain\n    response = await chain.get_response(question)\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 232, in get_response\n    \"sources\": [doc.metadata for doc in response[\"source_documents\"]]\nTypeError: 'type' object is not iterable\n", "stack_info": ["  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2195, in <module>\n    main()\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2177, in main\n    globals = debugger.run(setup['file'], None, None, is_module)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1489, in run\n    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1496, in _exec\n    pydev_imports.execfile(file, globals, locals)  # execute the script\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py\", line 18, in execfile\n    exec(compile(contents+\"\\n\", file, 'exec'), glob, loc)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py\", line 51, in <module>\n    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py\", line 175, in main\n    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 330, in pytest_cmdline_main\n    return wrap_session(config, _main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 283, in wrap_session\n    session.exitstatus = doit(config, session) or 0\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 337, in _main\n    config.hook.pytest_runtestloop(session=session)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 362, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 113, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 132, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 241, in call_and_report\n    call = CallInfo.from_call(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 341, in from_call\n    result: TResult | None = func()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 242, in <lambda>\n    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 174, in pytest_runtest_call\n    item.runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 533, in runtest\n    super().runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 1627, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 159, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 1052, in inner\n    _loop.run_until_complete(task)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/LLM/debug.py\", line 42, in test_conversation_chain\n    qa_logger.log_error(f\"测试过程中出错: {str(e)}\")\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 206, in get_response
+    response = await self.chain.ainvoke({
+TypeError: 'coroutine' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/debug.py", line 25, in test_conversation_chain
+    response = await chain.get_response(question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 232, in get_response
+    "sources": [doc.metadata for doc in response["source_documents"]]
+TypeError: 'type' object is not iterable
+Stack (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py", line 51, in <module>
+    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 533, in runtest
+    super().runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 1052, in inner
+    _loop.run_until_complete(task)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/LLM/debug.py", line 42, in test_conversation_chain
+    qa_logger.log_error(f"测试过程中出错: {str(e)}")
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 20:32:35,730 - qa_app - INFO - 31045 - 4403906048 - 创建新的对话链实例，知识库类型: business
+2025-03-09 20:32:35,744 - qa_app - INFO - 31045 - 4403906048 - 初始化对话链完成
+2025-03-09 20:32:51,106 - qa_app - INFO - 31045 - 4403906048 - 开始处理问题: 怎么管理渠道?
+2025-03-09 20:37:04,157 - qa_app - ERROR - 31045 - 4403906048 - {"error_message": "测试过程中出错: 'type' object is not iterable", "python_version": "3.9.21 (main, Dec 11 2024, 10:23:52) \n[Clang 14.0.6 ]", "timestamp": "2025-03-09T20:37:04.095204", "traceback": "Traceback (most recent call last):\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 142, in get_response\n    response = await self.chain.ainvoke({\nTypeError: 'coroutine' object is not callable\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/max.xu/LLM/debug.py\", line 25, in test_conversation_chain\n    response = await chain.get_response(question)\n  File \"/Users/max.xu/LLM/app/core/chains/conversation_chain.py\", line 142, in get_response\n    response = await self.chain.ainvoke({\nTypeError: 'type' object is not iterable\n", "stack_info": ["  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2195, in <module>\n    main()\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 2177, in main\n    globals = debugger.run(setup['file'], None, None, is_module)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1489, in run\n    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py\", line 1496, in _exec\n    pydev_imports.execfile(file, globals, locals)  # execute the script\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py\", line 18, in execfile\n    exec(compile(contents+\"\\n\", file, 'exec'), glob, loc)\n", "  File \"/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py\", line 51, in <module>\n    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py\", line 175, in main\n    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 330, in pytest_cmdline_main\n    return wrap_session(config, _main)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 283, in wrap_session\n    session.exitstatus = doit(config, session) or 0\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 337, in _main\n    config.hook.pytest_runtestloop(session=session)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py\", line 362, in pytest_runtestloop\n    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 113, in pytest_runtest_protocol\n    runtestprotocol(item, nextitem=nextitem)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 132, in runtestprotocol\n    reports.append(call_and_report(item, \"call\", log))\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 241, in call_and_report\n    call = CallInfo.from_call(\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 341, in from_call\n    result: TResult | None = func()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 242, in <lambda>\n    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py\", line 174, in pytest_runtest_call\n    item.runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 533, in runtest\n    super().runtest()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 1627, in runtest\n    self.ihook.pytest_pyfunc_call(pyfuncitem=self)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py\", line 513, in __call__\n    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py\", line 120, in _hookexec\n    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py\", line 159, in pytest_pyfunc_call\n    result = testfunction(**testargs)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py\", line 1052, in inner\n    _loop.run_until_complete(task)\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 634, in run_until_complete\n    self.run_forever()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 601, in run_forever\n    self._run_once()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py\", line 1905, in _run_once\n    handle._run()\n", "  File \"/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py\", line 80, in _run\n    self._context.run(self._callback, *self._args)\n", "  File \"/Users/max.xu/LLM/debug.py\", line 25, in test_conversation_chain\n    response = await chain.get_response(question)\n", "  File \"/Users/max.xu/LLM/app/utils/logger.py\", line 193, in log_error\n    error_context[\"stack_info\"] = traceback.extract_stack().format()\n"]}
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 142, in get_response
+    response = await self.chain.ainvoke({
+TypeError: 'coroutine' object is not callable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/max.xu/LLM/debug.py", line 25, in test_conversation_chain
+    response = await chain.get_response(question)
+  File "/Users/max.xu/LLM/app/core/chains/conversation_chain.py", line 142, in get_response
+    response = await self.chain.ainvoke({
+TypeError: 'type' object is not iterable
+Stack (most recent call last):
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2195, in <module>
+    main()
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2177, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1489, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py", line 51, in <module>
+    sys.exit(pytest.main(args, plugins_to_load + [Plugin]))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/config/__init__.py", line 175, in main
+    ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 330, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 283, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 337, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/main.py", line 362, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 113, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 132, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 241, in call_and_report
+    call = CallInfo.from_call(
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 341, in from_call
+    result: TResult | None = func()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 242, in <lambda>
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 533, in runtest
+    super().runtest()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pluggy/_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/site-packages/pytest_asyncio/plugin.py", line 1052, in inner
+    _loop.run_until_complete(task)
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 601, in run_forever
+    self._run_once()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/base_events.py", line 1905, in _run_once
+    handle._run()
+  File "/Users/max.xu/anaconda3/envs/env4LLM/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/max.xu/LLM/debug.py", line 25, in test_conversation_chain
+    response = await chain.get_response(question)
+  File "/Users/max.xu/LLM/app/utils/logger.py", line 195, in log_error
+    self.app_logger.error(
+2025-03-09 20:37:14,394 - qa_app - INFO - 31251 - 4767385088 - 创建新的对话链实例，知识库类型: business
+2025-03-09 20:37:14,395 - qa_app - INFO - 31251 - 4767385088 - 初始化对话链完成
+2025-03-09 20:37:17,909 - qa_app - INFO - 31251 - 4767385088 - 开始处理问题: 怎么管理渠道?
+2025-03-09 20:56:35,399 - qa_app - INFO - 31251 - 4767385088 - {'message': '生成向量嵌入', 'query': '怎么管理渠道?', 'vector_dimension': 1536, 'embedding_time': 2.5334317684173584}
+2025-03-09 20:58:08,790 - qa_app - INFO - 31251 - 4767385088 - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'business', 'top_k': 3, 'search_time': 28.4717218875885, 'total_hits': 3, 'results': [{'id': 'uekleJUBn2Vg_Bb_o4xq', 'score': 0.63316315, 'content_length': 112, 'content': '渠道管理制度:n1. 渠道分级n   - A级:年销售额>1000万n   - B级:年销售额500-1000万n   - C级:年销售额<500万n2. 支持政策n   - 返点政策n   - 促销支持n   - 培训服务', 'metadata': {'category': 'channel_management', 'source': '渠道管理手册', 'answer': '实施渠道分级管理', 'role': 'business'}}, {'id': 't-kleJUBn2Vg_Bb_n4yc', 'score': 0.4277945, 'content_length': 89, 'content': '销售目标管理:n1. 目标设定n   - 品类目标n   - 区域目标n   - 渠道目标n2. 考核指标n   - 销售额达成率n   - 毛利额达成率n   - 新客户开发量', 'metadata': {'category': 'sales_target', 'source': '销售管理制度', 'answer': '实施销售目标管理', 'role': 'business'}}, {'id': 'sOkleJUBn2Vg_Bb_k4zq', 'score': 0.36990613, 'content_length': 132, 'content': '供应商管理制度:n1. 准入标准n   - 经营资质审核n   - 产品质量评估n   - 供货能力评估n2. 合作等级n   - 战略供应商n   - 核心供应商n   - 一般供应商n3. 考核指标n   - 产品质量n   - 交付及时率n   - 售后服务', 'metadata': {'category': 'supplier_management', 'source': '供应链管理手册', 'answer': '执行供应商分级管理', 'role': 'business'}}]}
+2025-03-09 20:59:10,491 - qa_app - INFO - 31251 - 4767385088 - 文档检索完成 - 总耗时: 1307.09秒, 找到文档数: 3, 知识库类型: business
+2025-03-09 21:00:19,259 - qa_app - INFO - 32241 - 4669400576 - 启动服务器...
+2025-03-09 21:00:19,259 - qa_app - INFO - 启动服务器...
+2025-03-09 21:00:19,353 - qa_app - INFO - 32241 - 4669400576 - 应用服务启动...
+2025-03-09 21:00:19,353 - qa_app - INFO - 应用服务启动...
+2025-03-09 21:00:19,353 - qa_app - INFO - 应用服务启动...
+2025-03-09 21:00:19,458 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.104s]
+2025-03-09 21:00:19,458 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.104s]
+2025-03-09 21:00:19,458 - qa_app - INFO - 32241 - 4669400576 - Elasticsearch 连接成功
+2025-03-09 21:00:19,458 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 21:00:19,458 - qa_app - INFO - Elasticsearch 连接成功
+2025-03-09 21:00:19,458 - qa_app - INFO - 32241 - 4669400576 - DASHSCOPE_API_KEY 已配置
+2025-03-09 21:00:19,458 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 21:00:19,458 - qa_app - INFO - DASHSCOPE_API_KEY 已配置
+2025-03-09 21:00:19,458 - qa_app - INFO - 32241 - 4669400576 - 服务启动成功
+2025-03-09 21:00:19,458 - qa_app - INFO - 服务启动成功
+2025-03-09 21:00:19,458 - qa_app - INFO - 服务启动成功
+2025-03-09 21:00:51,235 - qa_app - INFO - 32241 - 4669400576 - 创建新会话: 678a415f-0e34-4af4-abc2-e63bd4be8c0b, 知识库类型: all
+2025-03-09 21:00:51,235 - qa_app - INFO - 创建新会话: 678a415f-0e34-4af4-abc2-e63bd4be8c0b, 知识库类型: all
+2025-03-09 21:00:51,235 - qa_app - INFO - 创建新会话: 678a415f-0e34-4af4-abc2-e63bd4be8c0b, 知识库类型: all
+2025-03-09 21:00:51,270 - qa_app - INFO - 32241 - 4669400576 - 创建新的对话链实例，知识库类型: all
+2025-03-09 21:00:51,270 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 21:00:51,270 - qa_app - INFO - 创建新的对话链实例，知识库类型: all
+2025-03-09 21:00:51,270 - qa_app - INFO - 32241 - 4669400576 - 收到问题 - 会话: 678a415f-0e34-4af4-abc2-e63bd4be8c0b, 问题: 怎么管理渠道
+2025-03-09 21:00:51,270 - qa_app - INFO - 收到问题 - 会话: 678a415f-0e34-4af4-abc2-e63bd4be8c0b, 问题: 怎么管理渠道
+2025-03-09 21:00:51,270 - qa_app - INFO - 收到问题 - 会话: 678a415f-0e34-4af4-abc2-e63bd4be8c0b, 问题: 怎么管理渠道
+2025-03-09 21:00:51,774 - qa_app - INFO - 32241 - 4669400576 - {'message': '生成向量嵌入', 'query': '怎么管理渠道', 'vector_dimension': 1536, 'embedding_time': 0.5004260540008545}
+2025-03-09 21:00:51,774 - qa_app - INFO - {'message': '生成向量嵌入', 'query': '怎么管理渠道', 'vector_dimension': 1536, 'embedding_time': 0.5004260540008545}
+2025-03-09 21:00:51,774 - qa_app - INFO - {'message': '生成向量嵌入', 'query': '怎么管理渠道', 'vector_dimension': 1536, 'embedding_time': 0.5004260540008545}
+2025-03-09 21:00:52,245 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:200 duration:0.255s]
+2025-03-09 21:00:52,245 - elastic_transport.transport - INFO - POST http://localhost:9200/llm_index/_search [status:200 duration:0.255s]
+2025-03-09 21:00:52,248 - app.utils.es_client - INFO - 搜索完成：总匹配数=42, 最高分=0.6216
+2025-03-09 21:00:52,248 - app.utils.es_client - INFO - 搜索完成：总匹配数=42, 最高分=0.6216
+2025-03-09 21:00:52,248 - qa_app - INFO - 32241 - 4669400576 - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'all', 'top_k': 3, 'search_time': 0.4741098880767822, 'total_hits': 3, 'results': [{'id': 'uekleJUBn2Vg_Bb_o4xq', 'score': 0.62161636, 'content_length': 112, 'content': '渠道管理制度:n1. 渠道分级n   - A级:年销售额>1000万n   - B级:年销售额500-1000万n   - C级:年销售额<500万n2. 支持政策n   - 返点政策n   - 促销支持n   - 培训服务', 'metadata': {'category': 'channel_management', 'source': '渠道管理手册', 'answer': '实施渠道分级管理', 'role': 'business'}}, {'id': 't-kleJUBn2Vg_Bb_n4yc', 'score': 0.40411136, 'content_length': 89, 'content': '销售目标管理:n1. 目标设定n   - 品类目标n   - 区域目标n   - 渠道目标n2. 考核指标n   - 销售额达成率n   - 毛利额达成率n   - 新客户开发量', 'metadata': {'category': 'sales_target', 'source': '销售管理制度', 'answer': '实施销售目标管理', 'role': 'business'}}, {'id': 'sukleJUBn2Vg_Bb_l4xL', 'score': 0.3831885, 'content_length': 127, 'content': '促销活动审批流程:n1. 活动策划n   - 确定促销商品n   - 制定促销方案n2. 部门审核n   - 运营部审核n   - 财务部审核n3. 系统设置n   - 价格调整n   - 库存预留n4. 活动执行n   - 页面发布n   - 效果监控', 'metadata': {'category': 'promotion_approval', 'source': '营销管理制度', 'answer': '按照审批流程开展促销活动', 'role': 'business'}}]}
+2025-03-09 21:00:52,248 - qa_app - INFO - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'all', 'top_k': 3, 'search_time': 0.4741098880767822, 'total_hits': 3, 'results': [{'id': 'uekleJUBn2Vg_Bb_o4xq', 'score': 0.62161636, 'content_length': 112, 'content': '渠道管理制度:n1. 渠道分级n   - A级:年销售额>1000万n   - B级:年销售额500-1000万n   - C级:年销售额<500万n2. 支持政策n   - 返点政策n   - 促销支持n   - 培训服务', 'metadata': {'category': 'channel_management', 'source': '渠道管理手册', 'answer': '实施渠道分级管理', 'role': 'business'}}, {'id': 't-kleJUBn2Vg_Bb_n4yc', 'score': 0.40411136, 'content_length': 89, 'content': '销售目标管理:n1. 目标设定n   - 品类目标n   - 区域目标n   - 渠道目标n2. 考核指标n   - 销售额达成率n   - 毛利额达成率n   - 新客户开发量', 'metadata': {'category': 'sales_target', 'source': '销售管理制度', 'answer': '实施销售目标管理', 'role': 'business'}}, {'id': 'sukleJUBn2Vg_Bb_l4xL', 'score': 0.3831885, 'content_length': 127, 'content': '促销活动审批流程:n1. 活动策划n   - 确定促销商品n   - 制定促销方案n2. 部门审核n   - 运营部审核n   - 财务部审核n3. 系统设置n   - 价格调整n   - 库存预留n4. 活动执行n   - 页面发布n   - 效果监控', 'metadata': {'category': 'promotion_approval', 'source': '营销管理制度', 'answer': '按照审批流程开展促销活动', 'role': 'business'}}]}
+2025-03-09 21:00:52,248 - qa_app - INFO - {'message': '知识库检索结果', 'index_name': 'llm_index', 'kb_type': 'all', 'top_k': 3, 'search_time': 0.4741098880767822, 'total_hits': 3, 'results': [{'id': 'uekleJUBn2Vg_Bb_o4xq', 'score': 0.62161636, 'content_length': 112, 'content': '渠道管理制度:n1. 渠道分级n   - A级:年销售额>1000万n   - B级:年销售额500-1000万n   - C级:年销售额<500万n2. 支持政策n   - 返点政策n   - 促销支持n   - 培训服务', 'metadata': {'category': 'channel_management', 'source': '渠道管理手册', 'answer': '实施渠道分级管理', 'role': 'business'}}, {'id': 't-kleJUBn2Vg_Bb_n4yc', 'score': 0.40411136, 'content_length': 89, 'content': '销售目标管理:n1. 目标设定n   - 品类目标n   - 区域目标n   - 渠道目标n2. 考核指标n   - 销售额达成率n   - 毛利额达成率n   - 新客户开发量', 'metadata': {'category': 'sales_target', 'source': '销售管理制度', 'answer': '实施销售目标管理', 'role': 'business'}}, {'id': 'sukleJUBn2Vg_Bb_l4xL', 'score': 0.3831885, 'content_length': 127, 'content': '促销活动审批流程:n1. 活动策划n   - 确定促销商品n   - 制定促销方案n2. 部门审核n   - 运营部审核n   - 财务部审核n3. 系统设置n   - 价格调整n   - 库存预留n4. 活动执行n   - 页面发布n   - 效果监控', 'metadata': {'category': 'promotion_approval', 'source': '营销管理制度', 'answer': '按照审批流程开展促销活动', 'role': 'business'}}]}
+2025-03-09 21:00:52,251 - qa_app - INFO - 32241 - 4669400576 - 文档检索完成 - 总耗时: 0.98秒, 找到文档数: 3, 知识库类型: all
+2025-03-09 21:00:52,251 - qa_app - INFO - 文档检索完成 - 总耗时: 0.98秒, 找到文档数: 3, 知识库类型: all
+2025-03-09 21:00:52,251 - qa_app - INFO - 文档检索完成 - 总耗时: 0.98秒, 找到文档数: 3, 知识库类型: all
+2025-03-09 21:00:53,873 - qa_metrics - INFO - {"timestamp": "2025-03-09T21:00:53.873246", "session_id": "678a415f-0e34-4af4-abc2-e63bd4be8c0b", "kb_type": "all", "question": "怎么管理渠道", "answer": "渠道的管理包括渠道的分级和提供给不同级别渠道的支持政策。\n\n1. 渠道分级：\n   - A级：年销售额超过1000万\n   - B级：年销售额介于500万到1000万之间\n   - C级：年销售额低于500万\n\n2. 支持政策包括：\n   - 返点政策\n   - 促销支持\n   - 培训服务", "sources": [{"category": "channel_management", "source": "渠道管理手册", "answer": "实施渠道分级管理", "role": "business"}, {"category": "sales_target", "source": "销售管理制度", "answer": "实施销售目标管理", "role": "business"}, {"category": "promotion_approval", "source": "营销管理制度", "answer": "按照审批流程开展促销活动", "role": "business"}], "response_time": 2.6378071308135986, "error": null, "metadata": {"token_count": 152, "source_count": 3}}
+2025-03-09 21:00:53,873 - qa_metrics - INFO - {"timestamp": "2025-03-09T21:00:53.873246", "session_id": "678a415f-0e34-4af4-abc2-e63bd4be8c0b", "kb_type": "all", "question": "怎么管理渠道", "answer": "渠道的管理包括渠道的分级和提供给不同级别渠道的支持政策。\n\n1. 渠道分级：\n   - A级：年销售额超过1000万\n   - B级：年销售额介于500万到1000万之间\n   - C级：年销售额低于500万\n\n2. 支持政策包括：\n   - 返点政策\n   - 促销支持\n   - 培训服务", "sources": [{"category": "channel_management", "source": "渠道管理手册", "answer": "实施渠道分级管理", "role": "business"}, {"category": "sales_target", "source": "销售管理制度", "answer": "实施销售目标管理", "role": "business"}, {"category": "promotion_approval", "source": "营销管理制度", "answer": "按照审批流程开展促销活动", "role": "business"}], "response_time": 2.6378071308135986, "error": null, "metadata": {"token_count": 152, "source_count": 3}}

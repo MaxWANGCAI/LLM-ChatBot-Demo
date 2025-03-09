@@ -23,8 +23,8 @@ class CustomRetriever(BaseRetriever, BaseModel):
         index_name = f"{settings.ELASTICSEARCH_INDEX_NAME}"
         super().__init__(kb_type=kb_type, index_name=index_name, **kwargs)
     
-    async def aget_relevant_documents(self, query: str) -> List[Document]:
-        """异步获取相关文档"""
+    async def _get_documents(self, query: str) -> List[Document]:
+        """内部方法：获取相关文档的核心逻辑"""
         start_time = time.time()
         try:
             # 使用阿里云的 embedding 服务
@@ -38,17 +38,40 @@ class CustomRetriever(BaseRetriever, BaseModel):
             qa_logger.log_debug(f"生成 embedding 耗时: {embedding_time:.2f}秒")
             
             if response.status_code == 200:
-                query_vector = response.output['embeddings'][0]
+                query_vector = response.output['embeddings'][0]['embedding']
+                qa_logger.log_info({
+                    "message": "生成向量嵌入",
+                    "query": query,
+                    "vector_dimension": len(query_vector),
+                    "embedding_time": embedding_time
+                })
                 
                 # 搜索相似文档
                 search_start = time.time()
                 results = es_client.search_similar(
-                    self.index_name,
-                    query_vector,
-                    settings.TOP_K_RESULTS
+                    query_vector=query_vector,
+                    role=None,
+                    top_k=settings.TOP_K_RESULTS
                 )
                 search_time = time.time() - search_start
-                qa_logger.log_debug(f"Elasticsearch 搜索耗时: {search_time:.2f}秒")
+                
+                # 记录搜索结果详情
+                search_details = {
+                    "message": "知识库检索结果",
+                    "index_name": self.index_name,
+                    "kb_type": self.kb_type,
+                    "top_k": settings.TOP_K_RESULTS,
+                    "search_time": search_time,
+                    "total_hits": len(results),
+                    "results": [{
+                        "id": hit['_id'],
+                        "score": hit['_score'],
+                        "content_length": len(hit['_source']['content']),
+                        "content": hit['_source']['content'],
+                        "metadata": hit['_source']['metadata']
+                    } for hit in results]
+                }
+                qa_logger.log_info(search_details)
                 
                 # 转换为文档格式
                 documents = []
@@ -72,56 +95,14 @@ class CustomRetriever(BaseRetriever, BaseModel):
         except Exception as e:
             qa_logger.log_error(f"检索文档时出错: {str(e)}")
             return []
+
+    async def aget_relevant_documents(self, query: str) -> List[Document]:
+        """异步获取相关文档"""
+        return await self._get_documents(query)
     
     def get_relevant_documents(self, query: str) -> List[Document]:
         """同步获取相关文档"""
-        start_time = time.time()
-        try:
-            # 使用阿里云的 embedding 服务
-            embedding_start = time.time()
-            response = TextEmbedding.call(
-                model="text-embedding-v2",
-                input=query,
-                api_key=settings.DASHSCOPE_API_KEY
-            )
-            embedding_time = time.time() - embedding_start
-            qa_logger.log_debug(f"生成 embedding 耗时: {embedding_time:.2f}秒")
-            
-            if response.status_code == 200:
-                query_vector = response.output['embeddings'][0]
-                
-                # 搜索相似文档
-                search_start = time.time()
-                results = es_client.search_similar(
-                    self.index_name,
-                    query_vector,
-                    settings.TOP_K_RESULTS
-                )
-                search_time = time.time() - search_start
-                qa_logger.log_debug(f"Elasticsearch 搜索耗时: {search_time:.2f}秒")
-                
-                # 转换为文档格式
-                documents = []
-                for hit in results:
-                    doc = Document(
-                        page_content=hit['_source']['content'],
-                        metadata=hit['_source']['metadata']
-                    )
-                    documents.append(doc)
-                
-                total_time = time.time() - start_time
-                qa_logger.log_info(
-                    f"文档检索完成 - 总耗时: {total_time:.2f}秒, "
-                    f"找到文档数: {len(documents)}, "
-                    f"知识库类型: {self.kb_type}"
-                )
-                return documents
-            else:
-                qa_logger.log_error(f"获取 embedding 失败: {response.message}")
-                return []
-        except Exception as e:
-            qa_logger.log_error(f"检索文档时出错: {str(e)}")
-            return []
+        return asyncio.run(self._get_documents(query))
 
 class ConversationChain:
     def __init__(self, kb_type: str):
@@ -201,4 +182,4 @@ class ConversationChain:
             self.memory.clear()
             qa_logger.log_info(f"对话历史已清除，共清除 {history_length} 条消息")
         except Exception as e:
-            qa_logger.log_error(f"清除对话历史时出错: {str(e)}") 
+            qa_logger.log_error(f"清除对话历史时出错: {str(e)}")
